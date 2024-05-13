@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,15 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .header-wrapper {
@@ -32,11 +42,140 @@ body {
   display: flex;
   gap: 16px;
   margin-left: auto;
-  justify-content: space-around;
   font-weight: 600;
 }
 
 .school-name {
   max-width: 22ch;
   line-height: 1.15;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: top;
+  background: #2c3a3a;
+  padding: 60px 40px;
+  color: #fff;
+}
+
+.footer-img-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-img {
+  filter: invert(1) grayscale(100);
+  height: 60px;
+  width: auto;
+}
+
+.footer-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
+  margin-left: auto;
+  line-height: 1;
+}
+
+.footer-list {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  opacity: 90%;
+}
+
+.footer-school-name {
+  max-width: 22ch;
+  line-height: 1.2;
+}
+
+.footer-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: auto;
+  background: #e7f5f5;
+  color: #2c3a3a;
+}
+
+.cta-button {
+  border: 2px solid #2c3a3a;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.socials-mine {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  gap: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  opacity: 80%;
+}
+
+.fb {
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.fb-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+h5,
+.h5 {
+  font-family: '"Playfair Display", serif';
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-size: 24px;
+}
+
+.pl40 {
+  padding-left: 40px;
+}
+
+h4,
+.h4 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-family: '"Playfair Display", serif';
+}
+
+.p-container {
+  padding: 60px 40px;
 }
