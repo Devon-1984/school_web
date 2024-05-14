@@ -7,9 +7,10 @@ const Navbar = () => {
   return (
     <header className="header-wrapper">
       <div className="img-label">
-        <Image src={logo} />
-        <label className="school-name">
-          EKTLASAL TILESWARI ADHIKARY HIGH SCHOOL
+        <Image className="logo" src={logo} />
+        <label className="school-name h5">
+          SAHUDANGI HAT <br />
+          P. K. ROY HIGH SCHOOL
         </label>
       </div>
       <ul className="header-list">

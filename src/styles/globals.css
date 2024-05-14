@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,10 +11,18 @@
   }
 }
 
+:root {
+  --white: #f5fcfa;
+  --primary-500: #00c281;
+  --primary-200: #e5f2ee;
+  --primary-900: #1f3830;
+}
+
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
-  min-width: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 #__next {
@@ -22,6 +30,36 @@ body {
   flex-direction: column;
   min-width: 100vh;
   min-height: 100vh;
+}
+
+h5,
+.h5 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+  font-size: 24px;
+}
+
+.pl40 {
+  padding-left: 40px;
+}
+
+.p-container {
+  padding: 60px 40px;
+}
+
+h4,
+.h4 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  font-family: "DM Serif Text", serif;
+}
+
+.logo {
+  width: 60px;
 }
 
 .header-wrapper {
@@ -48,12 +86,13 @@ body {
 .school-name {
   max-width: 22ch;
   line-height: 1.15;
+  font-size: 18px;
 }
 
 .footer-wrapper {
   display: flex;
   align-items: top;
-  background: #2c3a3a;
+  background: #1f3830;
   padding: 60px 40px;
   color: #fff;
 }
@@ -97,6 +136,7 @@ body {
 .footer-school-name {
   max-width: 22ch;
   line-height: 1.2;
+  font-size: 18px;
 }
 
 .footer-block-wrapper {
@@ -118,7 +158,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: auto;
-  background: #e7f5f5;
+  background: #e8f5f1;
   color: #2c3a3a;
 }
 
@@ -153,29 +193,4 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-h5,
-.h5 {
-  font-family: '"Playfair Display", serif';
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  font-size: 24px;
-}
-
-.pl40 {
-  padding-left: 40px;
-}
-
-h4,
-.h4 {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-family: '"Playfair Display", serif';
-}
-
-.p-container {
-  padding: 60px 40px;
 }

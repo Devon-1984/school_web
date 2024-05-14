@@ -10,11 +10,17 @@ export default function Footer() {
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
           <Image className="footer-img" src={logo} />
-          <figcaption className="footer-school-name">
-            EKTLASAL TILESWARI ADHIKARY HIGH SCHOOL
+          <figcaption className="footer-school-name h5">
+            SAHUDANGI HAT <br />
+            P. K. ROY HIGH SCHOOL
           </figcaption>
         </figure>
-        <label className="socials-mine">© 2024 | Developed by Debangan</label>
+        <a
+          href="https://www.linkedin.com/in/debangan-banerjee/"
+          className="socials-mine"
+        >
+          © 2024 | Developed by Debangan
+        </a>
       </div>
       <label className="footer-list-wrapper">
         <p className="h5">Our School</p>
@@ -28,8 +34,11 @@ export default function Footer() {
       <label className="footer-list-wrapper">
         <p className="h5">Contact us</p>
         <ul className="footer-list">
-          <li>2499, Martha Allen Drive, New York, USA.</li>
-          <li>321-464223482</li>
+          <li>
+            Vill + P.O Sahudangi, <br />
+            Jalpaiguri - 735135
+          </li>
+          <li>sdhpkr@gmailcom</li>
           <li>
             <div className="socials">
               Socials:
