@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../../public/logo.svg";
 import facebook from "../../public/facebook.png";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/icons/Logo";
 
 export default function Footer() {
   return (
     <footer className="footer-wrapper">
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
-          <Image className="footer-img" src={logo} />
+          <Logo width={67.5} height={60} />
           <figcaption className="footer-school-name h5">
             SAHUDANGI HAT <br />
             P. K. ROY HIGH SCHOOL
