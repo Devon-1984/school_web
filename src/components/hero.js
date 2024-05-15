@@ -17,9 +17,15 @@ export default function Hero() {
         </div>
       </div>
       <div className="stats">
-        <div className="h4 white">10,000+</div>
-        <div className="h4 white">30+</div>
-        <div className="h4 white">40+</div>
+        <div className="h4 white">
+          10,000+<p className="p">Students</p>
+        </div>
+        <div className="h4 white">
+          30+<p className="p">Classrooms</p>
+        </div>
+        <div className="h4 white">
+          40+<p className="p">Faculty</p>
+        </div>
       </div>
     </>
   );

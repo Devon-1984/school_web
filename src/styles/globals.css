@@ -34,6 +34,13 @@ body {
   min-height: 100vh;
 }
 
+p,
+.p {
+  font-family: var(--font-body);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
 h5,
 .h5 {
   font-family: var(--font-heading);
@@ -260,13 +267,19 @@ h4,
   background: var(--primary-900);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px;
+  grid-template-rows: auto;
   grid-gap: 3px;
   box-shadow: #1f3830;
+  padding: 20px;
 }
 
 .stats > div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.stats > div > p {
+  font-size: 13px;
 }
