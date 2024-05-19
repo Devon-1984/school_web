@@ -1,17 +1,21 @@
 import Image from "next/image";
-import Navbar from "../components/navbar";
-import { Inter } from "next/font/google";
-import Footer from "@/components/footer";
+
 import Cta from "@/components/cta";
 import Hero from "@/components/hero";
+import { sanityFetch } from "@/utils/sanity";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data);
   return (
     <>
       <Hero />
       <Cta />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const query = `*[_type == 'homepage'][0]`;
+  const data = await sanityFetch({ query });
+  return { props: { data } };
 }
