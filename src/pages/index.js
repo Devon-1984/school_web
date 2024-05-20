@@ -8,7 +8,7 @@ export default function Home({ data }) {
   console.log(data);
   return (
     <>
-      <Hero />
+      <Hero data={data} />
       <Cta />
     </>
   );
