@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero({ data }) {
+  let stats = data.heroStats.map((stat) => stat.stat_description);
+
   return (
     <>
       <div className="hero-img-wrapper">
-        <Image className="hero-img" src={hero} />
+        <Image className="hero-img" src={data.heroImgUrl} />
         <div className="hero-heading-wrapper">
           <h4 className="hero-heading h4">{data.heroTitle}</h4>
           <p>{data.heroSubtitle}</p>
@@ -15,16 +17,16 @@ export default function Hero({ data }) {
       </div>
       <div className="stats">
         <div className="hero-content white">
-          <p className="h3">10,000+</p>
-          <p className="p">Students</p>
+          <p className="h3">{stats[0][0]}</p>
+          <p className="p">{stats[0][1]}</p>
         </div>
         <div className="hero-content white">
-          <p className="h3">30+</p>
-          <p className="p">Classrooms</p>
+          <p className="h3">{stats[1][0]}</p>
+          <p className="p">{stats[1][1]}</p>
         </div>
         <div className="hero-content white">
-          <p className="h3">40+</p>
-          <p className="p">Faculty</p>
+          <p className="h3">{stats[2][0]}</p>
+          <p className="p">{stats[2][1]}</p>
         </div>
       </div>
     </>

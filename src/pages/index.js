@@ -15,7 +15,13 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const query = `*[_type == 'homepage'][0]`;
+  const query = `*[_type == 'homepage'][0]{
+    heroTitle,
+    "heroImgUrl":heroImg.asset->url,
+      heroSubtitle,
+      announcementText,
+      heroStats,
+    }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
 }

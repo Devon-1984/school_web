@@ -330,6 +330,7 @@ h4,
   letter-spacing: -0.01em;
   text-align: center;
   padding: 25px 0;
+  max-width: 18ch;
 }
 
 .hero-heading-wrapper {
