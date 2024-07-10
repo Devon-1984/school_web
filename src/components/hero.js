@@ -9,7 +9,12 @@ export default function Hero({ data }) {
   return (
     <>
       <div className="hero-img-wrapper">
-        <Image className="hero-img" src={data.heroImgUrl} />
+        <Image
+          className="hero-img"
+          src={data.heroImgUrl}
+          width={1200}
+          height={1200}
+        />
         <div className="hero-heading-wrapper">
           <h4 className="hero-heading h4">{data.heroTitle}</h4>
           <p>{data.heroSubtitle}</p>
