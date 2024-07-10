@@ -3,12 +3,14 @@ import Image from "next/image";
 import Cta from "@/components/cta";
 import Hero from "@/components/hero";
 import { sanityFetch } from "@/utils/sanity";
+import News from "@/components/news";
 
 export default function Home({ data }) {
   console.log(data);
   return (
     <>
       <Hero data={data} />
+      <News />
       <Cta />
     </>
   );
