@@ -1,5 +1,5 @@
-import { HeroStatDescription, homepageType } from "./schemas/homepage";
+import { HeroStatDescription, homepageType, news } from "./schemas/homepage";
 
 export const schema = {
-  types: [homepageType, HeroStatDescription],
+  types: [homepageType, HeroStatDescription, news],
 };

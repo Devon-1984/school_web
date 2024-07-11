@@ -10,7 +10,7 @@ export default function News() {
           Click below to explore our news section and stay informed about all
           the exciting happenings at our school.
         </p>
-        <button className="cta-button">View All News</button>
+        <button className="button">View All News</button>
       </div>
     </div>
   );
