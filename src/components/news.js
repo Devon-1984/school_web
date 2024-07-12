@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function News() {
+export default function News({ data }) {
+  let news = data.news.map((stat) => stat.stat_description);
+
   return (
     <div className="news-wrapper pl40">
       <h1 className="h4 p900">Latest News</h1>
