@@ -10,7 +10,7 @@ export default function Home({ data }) {
   return (
     <>
       <Hero data={data} />
-      <News />
+      <News data={data} />
       <Cta />
     </>
   );
@@ -23,6 +23,7 @@ export async function getStaticProps() {
       heroSubtitle,
       announcementText,
       heroStats,
+      news,
     }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
