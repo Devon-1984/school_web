@@ -440,7 +440,7 @@ h3,
 
 .card-wrapper {
   display: flex;
-  max-width: 90rem;
+  padding-right: 40px;
   justify-content: space-between;
   gap: 25px;
   border-radius: 4px;
@@ -481,4 +481,20 @@ h3,
   letter-spacing: -0.02em;
   text-align: left;
   opacity: 0.8;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  width: 100vw;
+  height: 600px;
+  padding: 40px;
+  background-color: var(--primary-900);
+  margin: 40px;
+  border-radius: 4px;
+  color: var(--white);
 }

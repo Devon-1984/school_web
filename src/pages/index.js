@@ -4,6 +4,7 @@ import Cta from "@/components/cta";
 import Hero from "@/components/hero";
 import { sanityFetch } from "@/utils/sanity";
 import News from "@/components/news";
+import About from "@/components/about";
 
 export default function Home({ data }) {
   console.log(data);
@@ -11,6 +12,7 @@ export default function Home({ data }) {
     <>
       <Hero data={data} />
       <News data={data} />
+      <About data={data} />
       <Cta />
     </>
   );
