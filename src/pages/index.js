@@ -5,14 +5,15 @@ import Hero from "@/components/hero";
 import { sanityFetch } from "@/utils/sanity";
 import News from "@/components/news";
 import About from "@/components/about";
+import { Gallery } from "@/components/gallery";
 
 export default function Home({ data }) {
-  console.log(data);
   return (
     <>
       <Hero data={data} />
       <News data={data} />
       <About data={data} />
+      <Gallery images={data.gallery} />
       <Cta />
     </>
   );
@@ -26,6 +27,13 @@ export async function getStaticProps() {
       announcementText,
       heroStats,
       news,
+      gallery[]{
+    asset->{
+    url}
+      }
+      
+      
+      
     }`;
   const data = await sanityFetch({ query });
   return { props: { data } };

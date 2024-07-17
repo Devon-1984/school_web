@@ -14,25 +14,6 @@ export const HeroStatDescription = defineType({
   ],
 });
 
-export const news = defineType({
-  name: "news",
-  title: "News",
-  type: "object",
-  fields: [
-    defineField({
-      name: "newsImg",
-      title: "News Image",
-      type: "image",
-    }),
-    defineField({
-      name: "newsArray",
-      title: "News Array",
-      type: "array",
-      of: [{ type: "string" }],
-    }),
-  ],
-});
-
 export const homepageType = defineType({
   name: "homepage",
   title: "Homepage",
@@ -58,6 +39,7 @@ export const homepageType = defineType({
       title: "Hero Image",
       type: "image",
     }),
+
     defineField({
       name: "heroStats",
       title: "Hero Stats",
@@ -65,10 +47,10 @@ export const homepageType = defineType({
       of: [{ type: "heroStatDescription" }],
     }),
     defineField({
-      name: "news",
-      title: "News",
+      name: "gallery",
+      title: "Gallery",
       type: "array",
-      of: [{ type: "news" }],
+      of: [{ type: "image" }],
     }),
   ],
 });

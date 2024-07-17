@@ -21,18 +21,12 @@ export default function Hero({ data }) {
         </div>
       </div>
       <div className="stats">
-        <div className="hero-content white">
-          <p className="h3">{stats[0][0]}</p>
-          <p className="p">{stats[0][1]}</p>
-        </div>
-        <div className="hero-content white">
-          <p className="h3">{stats[1][0]}</p>
-          <p className="p">{stats[1][1]}</p>
-        </div>
-        <div className="hero-content white">
-          <p className="h3">{stats[2][0]}</p>
-          <p className="p">{stats[2][1]}</p>
-        </div>
+        {stats.map((stat) => (
+          <div key={stat[0]} className="hero-content white">
+            <p className="h3">{stat[0]}</p>
+            <p className="p">{stat[1]}</p>
+          </div>
+        ))}
       </div>
     </>
   );
