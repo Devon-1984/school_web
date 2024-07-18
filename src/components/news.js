@@ -1,10 +1,10 @@
 import React from "react";
-import { news } from "../../sanity/schemas/homepage";
+import { news } from "../../sanity/schemas/news";
 import Image from "next/image";
 
 export default function News({ data }) {
-  const newsArrays = data.news.map((item) => item.newsArray);
-  console.log(newsArrays);
+  // const newsArrays = data.news.map((item) => item.newsArray);
+  // console.log(newsArrays);
   return (
     <>
       <div className="news-wrapper pl40">

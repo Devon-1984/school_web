@@ -46,6 +46,20 @@ export const homepageType = defineType({
       type: "array",
       of: [{ type: "heroStatDescription" }],
     }),
+
+    defineField({
+      name: "about",
+      title: "About us",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
+
+    defineField({
+      name: "aboutImg",
+      title: "About image",
+      type: "image",
+    }),
+
     defineField({
       name: "gallery",
       title: "Gallery",

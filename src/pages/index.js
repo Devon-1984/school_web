@@ -26,7 +26,8 @@ export async function getStaticProps() {
       heroSubtitle,
       announcementText,
       heroStats,
-      news,
+      about,
+    "aboutImgUrl":aboutImg.asset->url,
       gallery[]{
     asset->{
     url}

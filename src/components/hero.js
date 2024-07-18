@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero({ data }) {
-  let stats = data.heroStats.map((stat) => stat.stat_description);
+  const stats = data.heroStats.map((stat) => stat.stat_description);
 
   return (
     <>

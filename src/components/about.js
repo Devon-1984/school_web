@@ -6,14 +6,14 @@ export default function About({ data }) {
     <>
       <div className="about-wrapper">
         <div className="about w-50">
-          <div>About us</div>
-          <div>Trusted, honest, experienced teachers</div>
-          <button>Learn More</button>
+          <div className="about-heading">{data.about[0]}</div>
+          <div className="about-subheading h5">{data.about[1]}</div>
+          <button className="button">Learn More</button>
         </div>
         <div className="pos-rel image-wrapper w-50 ratio-1-1 overflow">
           <Image
             className="about-img"
-            src={data.heroImgUrl}
+            src={data.aboutImgUrl}
             sizes="40vw"
             fill
           />
