@@ -31,10 +31,17 @@ export async function getStaticProps() {
       gallery[]{
     asset->{
     url}
+      },
+
+      
+      "news":*[_type == 'newspage'] {
+        newsTitle,
+        newsSubtitle, 
+        news[]{
+        "newsImgUrl":newsImg.asset->url,
+        newsArray[]
       }
-      
-      
-      
+      }
     }`;
   const data = await sanityFetch({ query });
   return { props: { data } };

@@ -1,34 +1,29 @@
 import { defineField, defineType } from "sanity";
 
-export const news = defineType({
-  name: "news",
-  title: "News",
-  type: "object",
-  fields: [
-    defineField({
-      name: "newsImg",
-      title: "News Image",
-      type: "image",
-    }),
-    defineField({
-      name: "newsArray",
-      title: "News Array",
-      type: "array",
-      of: [{ type: "string" }],
-    }),
-  ],
-});
-
-export const newspageType = defineType({
+export const Newspage = defineType({
   name: "newspage",
   title: "Newspage",
   type: "document",
   fields: [
     defineField({
-      name: "news",
-      title: "News",
-      type: "array",
-      of: [{ type: "news" }],
+      name: "newsImg",
+      title: "Image",
+      type: "image",
+    }),
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+    }),
+    defineField({
+      name: "date",
+      title: "Published At",
+      type: "date",
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
     }),
   ],
 });

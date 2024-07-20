@@ -3,11 +3,11 @@ import { news } from "../../sanity/schemas/news";
 import Image from "next/image";
 
 export default function News({ data }) {
-  // const newsArrays = data.news.map((item) => item.newsArray);
-  // console.log(newsArrays);
+  const newsArrays = data.news;
+
   return (
     <>
-      <div className="news-wrapper pl40">
+      <div className="news-wrapper pl40 pr40">
         <h1 className="h4 p900">Latest News</h1>
         <div className="news-para-wrapper">
           <p>
@@ -18,7 +18,7 @@ export default function News({ data }) {
           <button className="button">View All News</button>
         </div>
       </div>
-      <div className="card-wrapper pl40">
+      <div className="card-wrapper pl40 pr40">
         <div className="card">
           <Image
             className="card-img"

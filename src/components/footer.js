@@ -6,10 +6,12 @@ import Logo from "@/icons/Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper">
+    <footer className="footer-wrapper pl40 pr40">
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
-          <Logo width={67.5} height={60} />
+          <div className="pos-rel footer-logo-wrapper">
+            <Logo width={67.5} height={60} className="footer-logo" />
+          </div>
           <figcaption className="footer-school-name h5">
             SAHUDANGI HAT <br />
             P. K. ROY HIGH SCHOOL

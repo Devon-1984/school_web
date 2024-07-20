@@ -48,6 +48,17 @@ export const homepageType = defineType({
     }),
 
     defineField({
+      name: "newsTitle",
+      title: "News Title",
+      type: "string",
+    }),
+    defineField({
+      name: "newsSubtitle",
+      title: "News Subtitle",
+      type: "string",
+    }),
+
+    defineField({
       name: "about",
       title: "About us",
       type: "array",
