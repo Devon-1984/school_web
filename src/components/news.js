@@ -4,17 +4,13 @@ import Image from "next/image";
 
 export default function News({ data }) {
   const newsArrays = data.news;
-
+  console.log(newsArrays);
   return (
     <>
       <div className="news-wrapper pl40 pr40">
-        <h1 className="h4 p900">Latest News</h1>
+        <h1 className="h4 p900">{newsArrays[0].newsTitle}</h1>
         <div className="news-para-wrapper">
-          <p>
-            Discover the latest events and updates from our school community!
-            Click below to explore our news section and stay informed about all
-            the exciting happenings at our school.
-          </p>
+          <p>{newsArrays[0].newsSubtitle}</p>
           <button className="button">View All News</button>
         </div>
       </div>

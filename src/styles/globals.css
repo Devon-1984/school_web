@@ -648,9 +648,7 @@ h3,
   .about-subheading {
     font-size: 30px;
   }
-}
 
-@media (max-width: 840px) {
   .footer-list-wrapper > .h5 {
     font-size: 20px;
   }
@@ -683,9 +681,7 @@ h3,
   .news-wrapper > h1 {
     font-size: 36px;
   }
-}
 
-@media (max-width: 790px) {
   .news-wrapper {
     flex-direction: column;
   }
@@ -733,9 +729,7 @@ h3,
   .image-wrapper {
     border-radius: 4px 4px 0px 0px;
   }
-}
 
-@media (max-width: 750px) {
   .footer-wrapper {
     grid-template-columns: 1fr;
     gap: 30px;
