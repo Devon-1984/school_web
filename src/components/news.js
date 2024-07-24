@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function News({ data }) {
   const newsArrays = data.news;
   console.log(newsArrays);
+  console.log(data);
   return (
     <>
       <div className="news-wrapper pl40 pr40">
