@@ -5,13 +5,12 @@ import Image from "next/image";
 export default function News({ data }) {
   const newsArrays = data.news;
   console.log(newsArrays);
-  console.log(data);
   return (
     <>
       <div className="news-wrapper pl40 pr40">
-        <h1 className="h4 p900">{newsArrays[0].newsTitle}</h1>
+        <h1 className="h4 p900">Latest Events</h1>
         <div className="news-para-wrapper">
-          <p>{newsArrays[0].newsSubtitle}</p>
+          <p></p>
           <button className="button">View All News</button>
         </div>
       </div>
