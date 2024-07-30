@@ -6,7 +6,7 @@ import Logo from "@/icons/Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper pl40 pr40">
+    <footer className="footer-wrapper pl-12 pr-12">
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
           <div className="pos-rel footer-logo-wrapper">

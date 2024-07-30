@@ -7,14 +7,14 @@ export default function News({ data }) {
   console.log(newsArrays);
   return (
     <>
-      <div className="news-wrapper pl40 pr40">
+      <div className="news-wrapper flex mt-[120px] mb-14 pl-12 pr-12">
         <h1 className="h4 p900">{data.newsTitle}</h1>
         <div className="news-para-wrapper">
           <p></p>
           <button className="button">View All Events</button>
         </div>
       </div>
-      <div className="card-wrapper pl40 pr40">
+      <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-12 ">
         <div className="card">
           <Image
             className="card-img"
