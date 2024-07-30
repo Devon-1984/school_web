@@ -12,7 +12,7 @@ export default function navbar() {
 
   return (
     <>
-      <div className="header-admission-wrapper">
+      <div className="header-admission-wrapper z-50 fixed max-w-full top-0 left-0">
         {admissions && (
           <div className="admission-wrapper">
             <p className="admission">Admissions are open</p>
@@ -36,7 +36,7 @@ export default function navbar() {
         <header className="header-wrapper">
           <div className="img-label">
             <Logo width={60} height={60} />
-            <label className="school-name h5">
+            <label className="school-name h5 font-heading">
               SAHUDANGI HAT <br />
               P. K. ROY HIGH SCHOOL
             </label>

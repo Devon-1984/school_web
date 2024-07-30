@@ -1,7 +1,9 @@
 import React from "react";
 
-const About = () => {
-  return <div>Never gonna give u up</div>;
-};
-
-export default About;
+export default function about() {
+  return (
+    <div className="p-3">
+      Lorem eqffqwd asdjoasdjand weqwijdiqwnd wqdniqwjdqwndwn iwqdhiqwdjqwdjdqw
+    </div>
+  );
+}

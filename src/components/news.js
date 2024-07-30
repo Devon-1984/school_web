@@ -4,12 +4,14 @@ import Image from "next/image";
 
 export default function News({ data }) {
   const newsArrays = data.news;
-  console.log(newsArrays);
+
   return (
     <>
       <div className="news-wrapper flex mt-[120px] mb-14 pl-12 pr-12">
-        <h1 className="h4 p900">{data.newsTitle}</h1>
-        <div className="news-para-wrapper">
+        <h1 className="text-5xl tracking-tight p900 primary-9">
+          {data.newsTitle}
+        </h1>
+        <div className="news-para-wrapper ml-auto">
           <p></p>
           <button className="button">View All Events</button>
         </div>

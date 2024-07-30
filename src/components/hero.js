@@ -11,7 +11,7 @@ export default function Hero({ data }) {
       <div className="hero-img-wrapper">
         <Image className="hero-img" src={data.heroImgUrl} sizes="100vw" fill />
         <div className="hero-heading-wrapper">
-          <h4 className="hero-heading">{data.heroTitle}</h4>
+          <h4 className="hero-heading font-semibold">{data.heroTitle}</h4>
         </div>
       </div>
       <div className="stats">
