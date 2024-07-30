@@ -200,6 +200,13 @@ h4,
   width: 100vw;
   max-width: 100vw;
   color: var(--white);
+  transition: background-color 0.5s ease;
+}
+
+.header-bg {
+  background: var(--primary-200);
+  color: var(--primary-900);
+  border-block-end: 1px solid;
 }
 
 .header-wrapper.active {
@@ -531,7 +538,7 @@ h3,
 .about-subheading {
   font-family: var(--font-heading);
   font-size: 56px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   text-align: left;
   max-width: 15ch;

@@ -6,6 +6,19 @@ import { useState } from "react";
 export default function navbar() {
   const [admissions, setAdmissions] = useState(true);
 
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeColor);
+  }
+
   function remove() {
     setAdmissions(false);
   }
@@ -14,7 +27,7 @@ export default function navbar() {
     <>
       <div className="header-admission-wrapper z-50 fixed max-w-full top-0 left-0">
         {admissions && (
-          <div className="admission-wrapper">
+          <div className="admission-wrapper flex justify-center bg-primary-500 text-white p-1 text-[11px] font-bold max-w-full relative">
             <p className="admission">Admissions are open</p>
             <button onClick={remove}>
               <svg
@@ -33,10 +46,12 @@ export default function navbar() {
             </button>
           </div>
         )}
-        <header className="header-wrapper">
+        <header
+          className={color ? "header-wrapper header-bg" : "header-wrapper"}
+        >
           <div className="img-label">
             <Logo width={60} height={60} />
-            <label className="school-name font-heading">
+            <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px]">
               SAHUDANGI HAT <br />
               P. K. ROY HIGH SCHOOL
             </label>
