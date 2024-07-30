@@ -32,16 +32,9 @@ export async function getStaticProps() {
     asset->{
     url}
       },
-
+    newsTitle,
       
-      "news":*[_type == 'newspage'] {
-        newsTitle,
-        newsSubtitle, 
-        news[]{
-        "newsImgUrl":newsImg.asset->url,
-        newsArray[]
-      }
-      }
+      "news":*[_type == 'newspage'][0..2]
     }`;
   const data = await sanityFetch({ query });
   return { props: { data } };

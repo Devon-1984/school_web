@@ -8,10 +8,10 @@ export default function News({ data }) {
   return (
     <>
       <div className="news-wrapper pl40 pr40">
-        <h1 className="h4 p900">Latest Events</h1>
+        <h1 className="h4 p900">{data.newsTitle}</h1>
         <div className="news-para-wrapper">
           <p></p>
-          <button className="button">View All News</button>
+          <button className="button">View All Events</button>
         </div>
       </div>
       <div className="card-wrapper pl40 pr40">
@@ -24,15 +24,10 @@ export default function News({ data }) {
           />
           <article className="article-wrapper">
             <div className="title-wrapper">
-              <div>Card title</div>
-              <date>13/02/24</date>
+              <div>{newsArrays[0].title}</div>
+              <date>{newsArrays[0].date}</date>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p>{newsArrays[0].description}</p>
           </article>
         </div>
         <div className="card">
@@ -44,15 +39,10 @@ export default function News({ data }) {
           />
           <article className="article-wrapper">
             <div className="title-wrapper">
-              <div>Card title</div>
-              <date>13/02/24</date>
+              <div>{newsArrays[1].title}</div>
+              <date>{newsArrays[1].date}</date>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p>{newsArrays[1].description}</p>
           </article>
         </div>
         <div className="card">
@@ -64,15 +54,10 @@ export default function News({ data }) {
           />
           <article className="article-wrapper">
             <div className="title-wrapper">
-              <div>Card title</div>
-              <date>13/02/24</date>
+              <div>{newsArrays[2].title}</div>
+              <date>{newsArrays[2].date}</date>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p>{newsArrays[2].description}</p>
           </article>
         </div>
       </div>
