@@ -36,7 +36,7 @@ export default function navbar() {
         <header className="header-wrapper">
           <div className="img-label">
             <Logo width={60} height={60} />
-            <label className="school-name h5 font-heading">
+            <label className="school-name font-heading">
               SAHUDANGI HAT <br />
               P. K. ROY HIGH SCHOOL
             </label>
