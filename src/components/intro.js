@@ -1,10 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
-export default function intro() {
+export default function Intro({ data }) {
+  console.log(data);
   return (
     <>
-      Sample text asdjasidjasidjas dadhaiodjaiasdjas dddadsidjaidjaidjawd
-      asdjaosidjaidjawidad
+      <div className="">
+        <div>
+          <div>{data.title}</div>
+          <div>{data.description}</div>
+        </div>
+        <Image className="card-img" src={data.heroImgUrl} sizes="100vw" />
+      </div>
     </>
   );
 }
