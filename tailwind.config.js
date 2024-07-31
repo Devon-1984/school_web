@@ -13,6 +13,9 @@ module.exports = {
         "primary-900": "#1f3830",
         white: "#f5fcfa",
       },
+      screens: {
+        md: "995px", // Custom breakpoint at 995px
+      },
       fontFamily: {
         body: ["DM Sans", "sans-serif"],
         heading: ["Playfair Display", "serif"],

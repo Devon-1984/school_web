@@ -3,12 +3,14 @@ import Intro from "@/components/intro";
 import Principal from "@/components/principal";
 import { sanityFetch } from "@/utils/sanity";
 import Cta from "@/components/cta";
+import Teachers from "@/components/teachers";
 
 export default function about({ data }) {
   return (
     <>
       <Intro data={data} />
       <Principal data={data} />
+      <Teachers data={data} />
       <Cta />
     </>
   );
@@ -22,6 +24,7 @@ export async function getStaticProps() {
   principal,
   principalDescription,
   "principalImg":principalImg.asset->url,
+  teachers,
 }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
