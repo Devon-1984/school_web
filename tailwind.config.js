@@ -14,7 +14,7 @@ module.exports = {
         white: "#f5fcfa",
       },
       fontFamily: {
-        body: ["Inter", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
         heading: ["Playfair Display", "serif"],
       },
       backgroundImage: {
