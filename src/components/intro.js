@@ -7,7 +7,7 @@ export default function Intro({ data }) {
     <>
       <div className="mt-32 mb-40 pl-6 pr-6 gap-5 text-primary-900 md:flex md:flex-row-reverse md:pl-12 md:pr-12">
         <Image
-          className="md:max-w-md"
+          className="md:max-w-sm"
           src={data.aboutImg}
           width={1200}
           height={1200}
