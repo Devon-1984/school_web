@@ -2,12 +2,14 @@ import React from "react";
 import Intro from "@/components/intro";
 import Principal from "@/components/principal";
 import { sanityFetch } from "@/utils/sanity";
+import Cta from "@/components/cta";
 
 export default function about({ data }) {
   return (
     <>
       <Intro data={data} />
       <Principal data={data} />
+      <Cta />
     </>
   );
 }
