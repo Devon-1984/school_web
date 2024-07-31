@@ -1,23 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "@/icons/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function navbar() {
   const [admissions, setAdmissions] = useState(true);
 
   const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 100) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
 
-  if (typeof window !== "undefined") {
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 100) return setColor(true);
+      return setColor(false);
+    };
+
     window.addEventListener("scroll", changeColor);
-  }
+
+    return () => window.removeEventListener("scroll", changeColor);
+  }, []);
 
   function remove() {
     setAdmissions(false);
