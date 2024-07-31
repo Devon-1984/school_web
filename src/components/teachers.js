@@ -8,7 +8,6 @@ export default function Teachers({ data }) {
           {data.teachers}
         </h1>
         <div className="news-para-wrapper ml-auto">
-          <p></p>
           <button className="button">View All Teachers</button>
         </div>
       </div>

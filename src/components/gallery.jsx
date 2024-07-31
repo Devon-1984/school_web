@@ -9,7 +9,10 @@ import Image from "next/image";
 
 export const Gallery = ({ images }) => {
   return (
-    <div className="pos-rel p40 overflow br4">
+    <div className="pos-rel p40 overflow br4 cursor-[grab]">
+      <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold mb-14">
+        Gallery
+      </h1>
       <Swiper
         className="br4 overflow"
         modules={[Pagination, Navigation, Autoplay]}
