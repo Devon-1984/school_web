@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "@/icons/Logo";
 import { useState, useEffect } from "react";
 
-export default function navbar() {
+export default function Navbar() {
   const [admissions, setAdmissions] = useState(true);
 
   const [color, setColor] = useState(false);
