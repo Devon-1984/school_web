@@ -34,7 +34,12 @@ export async function getStaticProps() {
       },
     newsTitle,
       
-      "news":*[_type == 'newspage'][0..2]
+      "news":*[_type == 'newspage'][0..2]{
+      "newsImg":newsImg.asset->url,
+        title,
+        description,
+        date
+      }
     }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
