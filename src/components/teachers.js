@@ -22,32 +22,31 @@ export default function Teachers({ data }) {
           <button className="button">View All Teachers</button>
         </div>
       </div>
-      <Swiper
-        modules={[Pagination, Navigation]}
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={{ clickable: true }}
-        className=""
-      >
-        <SwiperSlide className="h-52 w-28 mr-5">
-          <div className="pos-rel br4 ratio-1-1 overflow">
-            <Image
-              src={teachers[0].teachImg}
-              fill
-              objectFit="cover"
-              sizes="40vw"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="h-52 w-28 mr-5">Slide 2</SwiperSlide>
-        <SwiperSlide className="h-52 w-28 mr-5">Slide 3</SwiperSlide>
-        <SwiperSlide className="h-52 w-28 mr-5">Slide 4</SwiperSlide>
-        <SwiperSlide className="h-52 w-28 mr-5">Slide 5</SwiperSlide>
-        <SwiperSlide className="h-52 w-28 mr-5">Slide 6</SwiperSlide>
-      </Swiper>
+      <div className="p-6 md:p-12">
+        <Swiper
+          modules={[Pagination, Navigation]}
+          slidesPerView={3}
+          spaceBetween={1}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{ clickable: true }}
+          className="m-6 md:m-12 "
+        >
+          {teachers.map((teacher, index) => (
+            <SwiperSlide key={index} className="h-52 w-28 mr-5">
+              <div className="pos-rel br4 ratio-1-1 overflow max-w-96 mr-2">
+                <Image
+                  src={teacher.teachImg}
+                  fill
+                  objectFit="cover"
+                  sizes="40vw"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 }

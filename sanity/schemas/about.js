@@ -45,5 +45,10 @@ export const Aboutpage = defineType({
       title: "Teachers",
       type: "string",
     }),
+    defineField({
+      name: "board",
+      title: "Board Members",
+      type: "string",
+    }),
   ],
 });
