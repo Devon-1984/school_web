@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 export default function Intro({ data }) {
-  console.log(data);
   return (
     <>
       <div className="mt-32 mb-40 pl-6 pr-6 gap-5 text-primary-900 md:flex md:flex-row-reverse md:pl-12 md:pr-12">

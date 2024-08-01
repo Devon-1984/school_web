@@ -25,6 +25,10 @@ export async function getStaticProps() {
   principalDescription,
   "principalImg":principalImg.asset->url,
   teachers,
+  "faculty":*[_type == 'facultypage'][0..2] {
+  ourTeacher,
+  role,
+  "teachImg":teachImg.asset->url}
 }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
