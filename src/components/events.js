@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Facultyg({ data }) {
+export default function Heading({ data }) {
   const teachersData = data.faculty;
   return (
     <>
