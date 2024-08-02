@@ -4,7 +4,6 @@ import Principal from "@/components/principal";
 import { sanityFetch } from "@/utils/sanity";
 import Cta from "@/components/cta";
 import Teachers from "@/components/teachers";
-import Board from "@/components/accordion";
 
 export default function about({ data }) {
   return (
@@ -12,7 +11,6 @@ export default function about({ data }) {
       <Intro data={data} />
       <Principal data={data} />
       <Teachers data={data} />
-      <Board data={data} />
       <Cta />
     </>
   );

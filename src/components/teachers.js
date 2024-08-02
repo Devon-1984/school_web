@@ -1,4 +1,6 @@
 import React from "react";
+import Accordion from "@/components/accordion";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
@@ -9,7 +11,6 @@ import "swiper/css/autoplay";
 import Image from "next/image";
 
 export default function Teachers({ data }) {
-  console.log(data.faculty);
   const teachers = data.faculty;
 
   return (
@@ -19,7 +20,10 @@ export default function Teachers({ data }) {
           {data.teachers}
         </h1>
         <div className="news-para-wrapper ml-auto">
-          <button className="button">View All Teachers</button>
+          <button className="button">
+            {" "}
+            <Link href={"/faculty"}>View All Teachers</Link>
+          </button>
         </div>
       </div>
       <div className="p-6 md:p-12">
@@ -46,6 +50,19 @@ export default function Teachers({ data }) {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="m-6 md:m-12 md:flex">
+        <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold mr-auto">
+          {data.board}
+        </h1>
+        <div>
+          {" "}
+          <div className="p-4 rounded-lg">
+            <Accordion title="Name" answer="Neta 1" />
+            <Accordion title="Name 2" answer="Neta 2" />
+            <Accordion title="Name 3" answer="Neta 3" />
+          </div>
+        </div>
       </div>
     </>
   );

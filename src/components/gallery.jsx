@@ -21,7 +21,7 @@ export const Gallery = ({ images }) => {
       >
         {images.map((image) => (
           <SwiperSlide key={image.asset.url}>
-            <div className="pos-rel br4 ratio-16-9 overflow max-w-52">
+            <div className="pos-rel br4 ratio-16-9 overflow">
               <Image
                 src={image.asset.url}
                 fill
