@@ -7,7 +7,7 @@ import Cta from "@/components/cta";
 export default function about({ data }) {
   return (
     <>
-      <Heading data={data} />
+      <Heading data={data.teachers} />
       <Facultyg data={data} />
       <Cta />
     </>

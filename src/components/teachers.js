@@ -31,21 +31,27 @@ export default function Teachers({ data }) {
           modules={[Pagination, Navigation]}
           slidesPerView={3}
           spaceBetween={1}
-          pagination={{
-            clickable: true,
-          }}
           navigation={{ clickable: true }}
           className="m-6 md:m-12 "
         >
           {teachers.map((teacher, index) => (
-            <SwiperSlide key={index} className="h-52 w-28 mr-5">
-              <div className="pos-rel br4 ratio-1-1 overflow max-w-96 mr-2">
-                <Image
-                  src={teacher.teachImg}
-                  fill
-                  objectFit="cover"
-                  sizes="40vw"
-                />
+            <SwiperSlide
+              key={index}
+              className="h-52 w-28 flex flex-col items-center"
+            >
+              <div className=" text-left">
+                <div className="pos-rel br4 ratio-1-1 overflow max-w-96 mr-2">
+                  <Image
+                    src={teacher.teachImg}
+                    fill
+                    objectFit="cover"
+                    sizes="40vw"
+                  />
+                </div>
+                <div className="text-lg font-semibold text-primary-900">
+                  {teacher.ourTeacher}
+                </div>
+                <div className="text-primary-900">{teacher.role}</div>
               </div>
             </SwiperSlide>
           ))}
