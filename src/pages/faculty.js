@@ -1,12 +1,14 @@
 import React from "react";
 import Heading from "@/components/heading";
 import { sanityFetch } from "@/utils/sanity";
+import Facultyg from "@/components/facultyGrid";
 import Cta from "@/components/cta";
 
 export default function about({ data }) {
   return (
     <>
       <Heading data={data} />
+      <Facultyg data={data} />
       <Cta />
     </>
   );
