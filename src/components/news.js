@@ -1,6 +1,7 @@
 import React from "react";
 import { news } from "../../sanity/schemas/news";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function News({ data }) {
   const newsArrays = data.news;
@@ -13,7 +14,9 @@ export default function News({ data }) {
         </h1>
         <div className="news-para-wrapper ml-auto">
           <p></p>
-          <button className="button">View All Events</button>
+          <button className="button">
+            <Link href={"/event"}>View All Events</Link>
+          </button>
         </div>
       </div>
       <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-12 ">

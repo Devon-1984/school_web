@@ -59,7 +59,7 @@ export default function Navbar() {
           <ul className="header-list">
             <Link href={"/about"}>About</Link>
             <Link href={"/event"}>Events</Link>
-            <Link href={"/admission"}>Admissions</Link>
+            <Link href={"/notice"}>Notice</Link>
             <li>Contact</li>
           </ul>
         </header>
