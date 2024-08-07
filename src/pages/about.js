@@ -30,6 +30,10 @@ export async function getStaticProps() {
   role,
   "teachImg":teachImg.asset->url},
   board,
+  "Board":*[_type == 'boardpage']{
+  boardName,
+  desc,
+  "boardImg":boardImg.asset->url},
 }`;
   const data = await sanityFetch({ query });
   return { props: { data } };

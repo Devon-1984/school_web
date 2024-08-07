@@ -12,6 +12,8 @@ import Image from "next/image";
 
 export default function Teachers({ data }) {
   const teachers = data.faculty;
+  const Board = data.Board;
+  console.log(Board);
 
   return (
     <>
