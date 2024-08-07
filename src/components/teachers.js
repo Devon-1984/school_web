@@ -26,21 +26,20 @@ export default function Teachers({ data }) {
           </button>
         </div>
       </div>
-      <div className="p-6 md:p-12">
+      <div className="">
         <Swiper
           modules={[Pagination, Navigation]}
-          slidesPerView={3}
-          spaceBetween={1}
+          slidesPerView={3.5}
+          slidesOffsetBefore={48}
+          slidesOffsetAfter={48}
+          spaceBetween={20}
           navigation={{ clickable: true }}
-          className="m-6 md:m-12 "
+          className=""
         >
           {teachers.map((teacher, index) => (
-            <SwiperSlide
-              key={index}
-              className="h-52 w-28 flex flex-col items-center"
-            >
-              <div className=" text-left">
-                <div className="pos-rel br4 ratio-1-1 overflow max-w-96 mr-2">
+            <SwiperSlide key={index} className="">
+              <div className="text-left">
+                <div className="pos-rel br4 ratio-1-1 overflow">
                   <Image
                     src={teacher.teachImg}
                     fill

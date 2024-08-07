@@ -6,6 +6,15 @@ import { Aboutpage } from "./schemas/about";
 
 import { Facultypage } from "./schemas/faculty";
 
+import { Boardpage } from "./schemas/board";
+
 export const schema = {
-  types: [homepageType, HeroStatDescription, Newspage, Aboutpage, Facultypage],
+  types: [
+    homepageType,
+    HeroStatDescription,
+    Newspage,
+    Aboutpage,
+    Facultypage,
+    Boardpage,
+  ],
 };

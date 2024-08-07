@@ -60,7 +60,7 @@ export default function Navbar() {
             <Link href={"/about"}>About</Link>
             <Link href={"/event"}>Events</Link>
             <Link href={"/notice"}>Notice</Link>
-            <li>Contact</li>
+            <Link href={"/contact"}>Contact</Link>
           </ul>
         </header>
       </div>
