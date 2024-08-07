@@ -13,7 +13,6 @@ import Image from "next/image";
 export default function Teachers({ data }) {
   const teachers = data.faculty;
   const Board = data.Board;
-  console.log(Board);
 
   return (
     <>
@@ -65,9 +64,9 @@ export default function Teachers({ data }) {
         <div>
           {" "}
           <div className="p-4 rounded-lg">
-            <Accordion title="Name" answer="Neta 1" />
-            <Accordion title="Name 2" answer="Neta 2" />
-            <Accordion title="Name 3" answer="Neta 3" />
+            <Accordion title="Name" img={Board.boardImg} desc="Neta 1" />
+            <Accordion title="Name 2" img="" desc="Neta 2" />
+            <Accordion title="Name 3" img="" desc="Neta 3" />
           </div>
         </div>
       </div>

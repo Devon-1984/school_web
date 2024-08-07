@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, desc, img }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
@@ -45,8 +45,8 @@ const Accordion = ({ title, answer }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="">{answer}</div>
-          <div className="">{answer}</div>
+          <div className="">{img}</div>
+          <div className="">{desc}</div>
         </div>
       </div>
     </div>
