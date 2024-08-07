@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function News({ data }) {
   const newsArrays = data.news;
-
+  console.log(newsArrays);
   return (
     <>
       <div className="news-wrapper flex mt-[120px] mb-14 pl-12 pr-12">
@@ -22,8 +22,8 @@ export default function News({ data }) {
       <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-12 ">
         <div className="card">
           <Image
-            className="card-img"
-            src={data.heroImgUrl}
+            className="card-img h-60 object-fill"
+            src={newsArrays[0].newsImg}
             width={1200}
             height={1200}
           />
@@ -37,8 +37,8 @@ export default function News({ data }) {
         </div>
         <div className="card">
           <Image
-            className="card-img"
-            src={data.heroImgUrl}
+            className="card-img h-60 object-fill"
+            src={newsArrays[1].newsImg}
             width={1200}
             height={1200}
           />
@@ -52,8 +52,8 @@ export default function News({ data }) {
         </div>
         <div className="card">
           <Image
-            className="card-img"
-            src={data.heroImgUrl}
+            className="card-img h-60 object-fill"
+            src={newsArrays[2].newsImg}
             width={1200}
             height={1200}
           />
