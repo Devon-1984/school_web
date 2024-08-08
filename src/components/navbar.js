@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Logo from "@/icons/Logo";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
   const [admissions, setAdmissions] = useState(true);
 
   const [color, setColor] = useState(false);
@@ -46,21 +50,45 @@ export default function Navbar() {
             </button>
           </div>
         )}
+
         <header
           className={color ? "header-wrapper header-bg" : "header-wrapper"}
         >
           <div className="img-label">
-            <Logo width={60} height={60} />
+            <Link href={"/"}>
+              <Logo width={60} height={60} />
+            </Link>
             <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px]">
               SAHUDANGI HAT <br />
               P. K. ROY HIGH SCHOOL
             </label>
           </div>
+
           <ul className="header-list">
-            <Link href={"/about"}>About</Link>
-            <Link href={"/event"}>Events</Link>
-            <Link href={"/notice"}>Notice</Link>
-            <Link href={"/contact"}>Contact</Link>
+            <Link
+              href={"/about"}
+              className={currentRoute === "/about" ? " text-primary-500" : ""}
+            >
+              About
+            </Link>
+            <Link
+              href={"/event"}
+              className={currentRoute === "/event" ? " text-primary-500" : ""}
+            >
+              Events
+            </Link>
+            <Link
+              href={"/notice"}
+              className={currentRoute === "/notice" ? " text-primary-500" : ""}
+            >
+              Notice
+            </Link>
+            <Link
+              href={"/contact"}
+              className={currentRoute === "/contact" ? " text-primary-500" : ""}
+            >
+              Contact
+            </Link>
           </ul>
         </header>
       </div>
