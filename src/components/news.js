@@ -19,8 +19,8 @@ export default function News({ data }) {
           </button>
         </div>
       </div>
-      <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-12 ">
-        <div className="card">
+      <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-6 md:mb-12 ">
+        {/* <div className="card">
           <Image
             className="card-img h-60 object-fill"
             src={newsArrays[0].newsImg}
@@ -64,7 +64,24 @@ export default function News({ data }) {
             </div>
             <p>{newsArrays[2].description}</p>
           </article>
-        </div>
+        </div> */}
+        {newsArrays.map((news, index) => (
+          <div className="card" key={index}>
+            <Image
+              className="card-img h-60 object-fill"
+              src={news.newsImg}
+              width={1200}
+              height={1200}
+            />
+            <article className="article-wrapper">
+              <div className="title-wrapper">
+                <div>{news.title}</div>
+                <date>{news.date}</date>
+              </div>
+              <p>{news.description}</p>
+            </article>
+          </div>
+        ))}
       </div>
     </>
   );
