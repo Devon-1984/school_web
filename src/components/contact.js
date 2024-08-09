@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact() {
   return (
     <>
-      <div className="md:pl-12 md:pr-12 pl-6 pr-6">
+      <div className="md:pl-12 md:pr-12 pl-6 pr-6 mb-5 md:mb-10">
         <div className="mt-[170px] mb-10">
           <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold">
             Contact Us
@@ -57,79 +57,45 @@ export default function Contact() {
             <p>122 348 1910</p>
           </div>
         </div>
-        {/* <form name="contact" netlify>
-          <p>
-            <label>
-              Email Address
-              <input type="text" name="name" />
-            </label>
+
+        <form name="contact" netlify className="max-w-md">
+          <p className="border-b-2 border-primary-900  ">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none  py-2 md:py-4"
+            />
+          </p>
+          <p className="border-b-2 border-primary-900  ">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none  py-2 md:py-4"
+            />
+          </p>
+          <p className="border-b-2 border-primary-900  ">
+            <input
+              type="tel"
+              name="Mobile"
+              placeholder="Mobile"
+              className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none  py-2 md:py-4"
+            />
           </p>
           <p>
-            <label>
-              Name <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Mobile <input type="tel" name="Mobile" />
-            </label>
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="4"
+              className="placeholder-primary-900 text-primary-900 mt-1 block w-full border-b-2 border-primary-900 focus:outline-none py-2 md:py-4"
+            ></textarea>
           </p>
           <p>
             <button
-              className="button py-2 px-5 md:px-10 md:py-4 text-sm"
+              className="button py-2 px-5 md:px-10 md:py-4 mt-12"
               type="submit"
             >
-              Submit
-            </button>
-          </p>
-        </form> */}
-        <form
-          name="contact"
-          netlify
-          className="space-y-6 max-w-md text-primary-900"
-        >
-          <p>
-            <label className="block text-sm font-medium">
-              Email Address
-              <input
-                type="email"
-                name="email"
-                className="mt-1 block w-full border-b-2 border-gray-300 focus:outline-none focus:border-green-600"
-              />
-            </label>
-          </p>
-          <p>
-            <label className="block text-sm font-medium">
-              Name
-              <input
-                type="text"
-                name="name"
-                className="mt-1 block w-full border-b-2 border-primary-900 focus:outline-none focus:border-green-600"
-              />
-            </label>
-          </p>
-          <p>
-            <label className="block text-sm font-medium">
-              Mobile
-              <input
-                type="tel"
-                name="Mobile"
-                className="mt-1 block w-full border-b-2 border-primary-900 focus:outline-none focus:border-green-600"
-              />
-            </label>
-          </p>
-          <p>
-            <label className="block text-sm font-medium">
-              Message
-              <textarea
-                name="message"
-                rows="4"
-                className="mt-1 block w-full border-b-2 border-primary-900 focus:outline-none focus:border-green-600"
-              ></textarea>
-            </label>
-          </p>
-          <p>
-            <button className="button py-2 px-5 md:px-10 md:py-4" type="submit">
               Submit
             </button>
           </p>
