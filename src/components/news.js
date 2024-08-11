@@ -19,7 +19,7 @@ export default function News({ data }) {
           </button>
         </div>
       </div>
-      <div className="card-wrapper pl-12 pr-12 flex justify-between gap-6 mb-6 md:mb-12 ">
+      <div className="card-wrapper md:pl-12 md:pr-12 pl-6 pr-6 flex justify-between gap-6 mb-6 md:mb-12 ">
         {/* <div className="card">
           <Image
             className="card-img h-60 object-fill"

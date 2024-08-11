@@ -7,7 +7,7 @@ const Accordion = ({ title, desc, img }) => {
     <div className="pb-2 pt-4 border-b border-solid border-primary-900 text-primary-900">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-[750px]"
+        className="flex justify-between md:w-[750px] w-[-moz-available]"
       >
         <span className="font-medium">{title}</span>
         {/* {accordionOpen ? <span>-</span> : <span>+</span>} */}
