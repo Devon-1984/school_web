@@ -8,7 +8,8 @@ const Accordion = ({ title, desc, img }) => {
     <div className="pb-2 pt-4 border-b border-solid border-primary-900 text-primary-900 max-w-[750px]">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-[-moz-available]"
+        className="flex justify-between w-[-webkit-fill-available]"
+        // w-[-moz-available]
       >
         <span className="font-medium">{title}</span>
         <svg

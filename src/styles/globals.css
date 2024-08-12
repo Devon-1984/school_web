@@ -678,13 +678,13 @@ h3,
     font-size: 30px;
   }
 
-  .news-wrapper > h1 {
+  /* .news-wrapper > h1 {
     font-size: 36px;
   }
 
   .news-wrapper {
     flex-direction: column;
-  }
+  } */
   .header-wrapper {
     padding: 20px;
   }

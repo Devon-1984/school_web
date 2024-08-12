@@ -16,8 +16,8 @@ export default function Teachers({ data }) {
 
   return (
     <>
-      <div className="news-wrapper flex mt-[120px] mb-14 pl-12 pr-12">
-        <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold">
+      <div className="flex flex-col md:flex-row mt-[120px] mb-14 md:pl-12 md:pr-12 pl-6 pr-6">
+        <h1 className="text-4xl md:text-5xl tracking-tight p900 to-primary-900 font-semibold">
           {data.teachers}
         </h1>
         <div className="news-para-wrapper ml-auto">
@@ -27,10 +27,15 @@ export default function Teachers({ data }) {
           </button>
         </div>
       </div>
-      <div className="">
+      <div className="cursor-grab">
         <Swiper
           modules={[Pagination, Navigation]}
-          slidesPerView={3.5}
+          slides-per-view={3.5}
+          breakpoints={{
+            995: {
+              slidesPerView: 3.5,
+            },
+          }}
           slidesOffsetBefore={48}
           slidesOffsetAfter={48}
           spaceBetween={20}
@@ -40,7 +45,7 @@ export default function Teachers({ data }) {
           {teachers.map((teacher, index) => (
             <SwiperSlide key={index} className="">
               <div className="text-left">
-                <div className="pos-rel br4 ratio-1-1 overflow">
+                <div className="pos-rel rounded aspect-square overflow">
                   <Image
                     src={teacher.teachImg}
                     fill
@@ -58,7 +63,7 @@ export default function Teachers({ data }) {
         </Swiper>
       </div>
       <div className="m-6 md:m-12 md:flex">
-        <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold mr-auto">
+        <h1 className="text-4xl md:text-5xl tracking-tight p900 to-primary-900 font-semibold mr-auto">
           {data.board}
         </h1>
         <div>
