@@ -25,8 +25,8 @@ export default function News({ data }) {
             <Image
               className="card-img aspect-video rounded gap-0 object-fill"
               src={news.newsImg}
-              width={1200}
-              height={1200}
+              width={500}
+              height={500}
             />
             <article className="article-wrapper">
               <div className="title-wrapper">

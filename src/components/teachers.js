@@ -62,11 +62,15 @@ export default function Teachers({ data }) {
           {data.board}
         </h1>
         <div>
-          {" "}
-          <div className="p-4 rounded-lg">
-            <Accordion title="Name" img={Board.boardImg} desc="Neta 1" />
-            <Accordion title="Name 2" img="" desc="Neta 2" />
-            <Accordion title="Name 3" img="" desc="Neta 3" />
+          <div className="pt-4 pb-4">
+            {Board.map((board, index) => (
+              <Accordion
+                key={index}
+                title={board.boardName}
+                img={board.boardImg}
+                desc={board.desc}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -29,8 +29,8 @@ export default function Footer() {
         <ul className="footer-list">
           <Link href={"/about"}>About</Link>
           <Link href={"/event"}>Events</Link>
-          <Link href={"/admission"}>Admissions</Link>
-          <li>Contact</li>
+          <Link href={"/notice"}>Notices</Link>
+          <Link href={"/contact"}>Contact</Link>
         </ul>
       </label>
       <label className="footer-list-wrapper">

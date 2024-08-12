@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Accordion = ({ title, desc, img }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="pb-2 pt-4 border-b border-solid border-primary-900 text-primary-900">
+    <div className="pb-2 pt-4 border-b border-solid border-primary-900 text-primary-900 max-w-[750px]">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between md:w-[750px] w-[-moz-available]"
+        className="flex justify-between w-[-moz-available]"
       >
         <span className="font-medium">{title}</span>
-        {/* {accordionOpen ? <span>-</span> : <span>+</span>} */}
         <svg
           className="fill-primary-900 shrink-0 ml-8"
           width="16"
@@ -44,8 +44,13 @@ const Accordion = ({ title, desc, img }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">
-          <div className="">{img}</div>
+        <div className="overflow-hidden md:flex gap-7">
+          <Image
+            className="aspect-auto rounded gap-0 object-fill"
+            src={img}
+            width={500}
+            height={500}
+          />
           <div className="">{desc}</div>
         </div>
       </div>
