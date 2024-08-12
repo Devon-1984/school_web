@@ -39,7 +39,7 @@ export default function Teachers({ data }) {
           slidesOffsetBefore={48}
           slidesOffsetAfter={48}
           spaceBetween={20}
-          navigation={{ clickable: true }}
+          // navigation={{ clickable: true }}
           className=""
         >
           {teachers.map((teacher, index) => (
