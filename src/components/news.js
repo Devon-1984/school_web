@@ -20,55 +20,10 @@ export default function News({ data }) {
         </div>
       </div>
       <div className="card-wrapper md:pl-12 md:pr-12 pl-6 pr-6 flex justify-between gap-6 mb-6 md:mb-12 ">
-        {/* <div className="card">
-          <Image
-            className="card-img h-60 object-fill"
-            src={newsArrays[0].newsImg}
-            width={1200}
-            height={1200}
-          />
-          <article className="article-wrapper">
-            <div className="title-wrapper">
-              <div>{newsArrays[0].title}</div>
-              <date>{newsArrays[0].date}</date>
-            </div>
-            <p>{newsArrays[0].description}</p>
-          </article>
-        </div>
-        <div className="card">
-          <Image
-            className="card-img h-60 object-fill"
-            src={newsArrays[1].newsImg}
-            width={1200}
-            height={1200}
-          />
-          <article className="article-wrapper">
-            <div className="title-wrapper">
-              <div>{newsArrays[1].title}</div>
-              <date>{newsArrays[1].date}</date>
-            </div>
-            <p>{newsArrays[1].description}</p>
-          </article>
-        </div>
-        <div className="card">
-          <Image
-            className="card-img h-60 object-fill"
-            src={newsArrays[2].newsImg}
-            width={1200}
-            height={1200}
-          />
-          <article className="article-wrapper">
-            <div className="title-wrapper">
-              <div>{newsArrays[2].title}</div>
-              <date>{newsArrays[2].date}</date>
-            </div>
-            <p>{newsArrays[2].description}</p>
-          </article>
-        </div> */}
         {newsArrays.map((news, index) => (
           <div className="card" key={index}>
             <Image
-              className="card-img h-60 object-fill"
+              className="card-img aspect-video rounded gap-0 object-fill"
               src={news.newsImg}
               width={1200}
               height={1200}
