@@ -22,7 +22,8 @@ export async function getStaticProps() {
       "newsImg":newsImg.asset->url,
         title,
         description,
-        date
+        date,
+        slug
       }
 }`;
   const data = await sanityFetch({ query });

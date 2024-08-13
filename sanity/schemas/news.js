@@ -25,5 +25,14 @@ export const Newspage = defineType({
       title: "Description",
       type: "text",
     }),
+    defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+    }),
   ],
 });

@@ -7,14 +7,11 @@ export default function Notices({ data }) {
         {data.map((item, index) => (
           <div
             key={index}
-            className="grid grid-cols-3 items-center border-b text-primary-900 py-2"
+            className="grid grid-cols-3 items-center border-b text-primary-900 font-medium py-2"
           >
-            <div className="text-primary-900">{item.title}</div>
-            <div className="text-primary-900 text-center">{item.date}</div>
-            <a
-              href={item.pdfFileURL}
-              className="text-primary-900 flex justify-end"
-            >
+            <div className="">{item.title}</div>
+            <div className=" text-center">{item.date}</div>
+            <a href={item.pdfFileURL} className=" flex justify-end">
               <svg
                 width="24"
                 height="24"
