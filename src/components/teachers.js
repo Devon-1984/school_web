@@ -21,7 +21,7 @@ export default function Teachers({ data }) {
           {data.teachers}
         </h1>
         <div className="news-para-wrapper ml-auto">
-          <button className="button">
+          <button className="button py-2.5 px-4">
             {" "}
             <Link href={"/faculty"}>View All Teachers</Link>
           </button>
