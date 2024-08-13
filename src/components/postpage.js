@@ -1,15 +1,17 @@
-// post.tsx
-import { useRouter } from "next/router";
+import React from "react";
+import { news } from "../../sanity/schemas/news";
+import Image from "next/image";
+import Link from "next/link";
 
-const Post = () => {
-  const router = useRouter();
-
+export default function Postpage({ data }) {
+  const newsArrays = data.news;
+  console.log(newsArrays);
   return (
     <>
       <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
         <div className="max-w-3xl mx-auto mt-20">
           <h1 className="text-5xl font-heading font-bold text-center text-primary-900">
-            {router.query.slug}
+            News
           </h1>
           <p className="text-center text-lg text-primary-900 mt-2">
             25th Feb, 2024
@@ -53,6 +55,4 @@ const Post = () => {
       </div>
     </>
   );
-};
-
-export default Post;
+}
