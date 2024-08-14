@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function EventGallery({ images }) {
   const [show, setShow] = useState(false);
@@ -31,10 +32,13 @@ export default function EventGallery({ images }) {
               href={image.asset.url}
             >
               <div className="aspect-video rounded-lg overflow-hidden">
-                <img
-                  className="w-full h-full object-cover object-center"
+                <Image
+                  className="aspect-video rounded-lg object-cover"
                   src={getThumbnailUrl(image.asset.url)}
-                  alt=""
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </a>
@@ -48,10 +52,13 @@ export default function EventGallery({ images }) {
             onKeyDown={(e) => e.key === "Escape" && close()}
             tabIndex={-1}
           >
-            <img
-              className="w-4/5 h-4/5 object-contain object-center transition ease-in-out duration-300 transform scale-100"
+            <Image
+              className="object-contain object-center transition ease-in-out duration-300 transform scale-100"
               src={activeImageUrl}
-              alt=""
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "80%", height: "80%" }}
             />
           </div>
         )}
