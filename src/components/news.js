@@ -7,7 +7,7 @@ export default function News({ data }) {
   const newsArrays = data.news;
   return (
     <>
-      <div className="flex flex-col md:flex-row mt-[120px] mb-14 md:pl-12 md:pr-12 pl-6 pr-6">
+      <div className="flex flex-col md:flex-row mt-[120px] mb-[-1.5] md:pl-12 md:pr-12 pl-6 pr-6">
         <h1 className="text-4xl md:text-5xl tracking-tight p900 to-primary-900 font-semibold">
           {data.newsTitle}
         </h1>
@@ -18,7 +18,7 @@ export default function News({ data }) {
           </button>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:pl-12 md:pr-12 pl-6 pr-6 justify-between gap-6 mb-6 md:mb-12 ">
+      {/* <div className="flex flex-col md:flex-row md:pl-12 md:pr-12 pl-6 pr-6 justify-between gap-6 mb-6 md:mb-12 ">
         {newsArrays.map((news, index) => (
           <div className="" key={index}>
             <Image
@@ -44,7 +44,7 @@ export default function News({ data }) {
             </article>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

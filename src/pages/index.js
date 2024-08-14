@@ -6,12 +6,14 @@ import { sanityFetch } from "@/utils/sanity";
 import News from "@/components/news";
 import About from "@/components/about";
 import { Gallery } from "@/components/gallery";
+import Events from "@/components/events";
 
 export default function Home({ data }) {
   return (
     <>
       <Hero data={data} />
       <News data={data} />
+      <Events data={data} />
       <About data={data} />
       <Gallery images={data.gallery} />
       <Cta />
@@ -35,7 +37,8 @@ export async function getStaticProps() {
       "newsImg":newsImg.asset->url,
         title,
         description,
-        date
+        date,
+        slug
       }
     }`;
   const data = await sanityFetch({ query });
