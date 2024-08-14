@@ -14,7 +14,7 @@ export default function Events({ data }) {
               className="w-full aspect-video rounded-lg object-cover"
             /> */}
             <Image
-              className="aspect-video rounded-[0.6rem] gap-0 object-fill"
+              className="aspect-video rounded-lg overflow-hidden"
               src={news.newsImg}
               width={0}
               height={0}

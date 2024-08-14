@@ -22,26 +22,28 @@ export default function EventGallery({ images }) {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div>
-        <div className="mt-6 max-w-2xl mx-auto grid gap-2 grid-cols-4 px-6">
+        <div className="mt-6 max-w-5xl mx-auto grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-6">
           {images.map((image, index) => (
             <a
               key={index}
               onClick={(e) => open(e, image.asset.url)}
-              className="block relative bg-red-100"
+              className="block relative"
               href={image.asset.url}
             >
-              <img
-                className="w-full h-full object-cover object-center"
-                src={getThumbnailUrl(image.asset.url)}
-                alt=""
-              />
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img
+                  className="w-full h-full object-cover object-center"
+                  src={getThumbnailUrl(image.asset.url)}
+                  alt=""
+                />
+              </div>
             </a>
           ))}
         </div>
 
         {show && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center"
+            className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-[51]"
             onClick={close}
             onKeyDown={(e) => e.key === "Escape" && close()}
             tabIndex={-1}

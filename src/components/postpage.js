@@ -5,7 +5,7 @@ export default function Postpage({ data }) {
   const { title, description, date, newsImg } = data;
 
   return (
-    <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6 mb-16">
+    <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
       <div className="max-w-3xl mx-auto mt-20">
         <h1 className="text-5xl font-heading font-bold text-center text-primary-900">
           {title}

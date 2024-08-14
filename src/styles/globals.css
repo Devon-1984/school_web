@@ -289,16 +289,6 @@ h4,
   gap: 8px;
 }
 
-.cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: auto;
-  background: var(--primary-200);
-  color: var(--primary-900);
-}
-
 .button {
   border: 2px solid var(--primary-900);
   border-radius: 100px;
@@ -315,11 +305,6 @@ h4,
 .button.secondary:hover {
   color: var(--primary-900);
   background-color: var(--primary-200);
-}
-
-.cta > button {
-  padding: 10px 30px;
-  margin-top: 20px;
 }
 
 .button:hover {
@@ -658,11 +643,5 @@ h3,
     grid-template-columns: 1fr;
     gap: 30px;
     padding-block: 30px;
-  }
-
-  .cta-text {
-    text-align: center;
-    text-wrap: balance;
-    line-height: 1.2;
   }
 }

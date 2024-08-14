@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="footer-wrapper pl-12 pr-12">
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
-          <div className="pos-rel footer-logo-wrapper">
+          <div className="">
             <Logo width={67.5} height={60} className="footer-logo" />
           </div>
           <figcaption className="footer-school-name h5">
