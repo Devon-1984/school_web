@@ -11,6 +11,12 @@ export const Newspage = defineType({
       type: "image",
     }),
     defineField({
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+      of: [{ type: "image" }],
+    }),
+    defineField({
       name: "title",
       title: "Title",
       type: "string",

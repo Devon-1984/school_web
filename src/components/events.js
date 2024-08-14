@@ -14,10 +14,12 @@ export default function Events({ data }) {
               className="w-full aspect-video rounded-lg object-cover"
             /> */}
             <Image
-              className="aspect-video rounded gap-0 object-fill"
+              className="aspect-video rounded-[0.6rem] gap-0 object-fill"
               src={news.newsImg}
-              width={900}
-              height={900}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
             />
             <div className="p-4">
               <div className="flex">

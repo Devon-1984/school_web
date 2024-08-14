@@ -5,7 +5,7 @@ export default function Postpage({ data }) {
   const { title, description, date, newsImg } = data;
 
   return (
-    <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
+    <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6 mb-16">
       <div className="max-w-3xl mx-auto mt-20">
         <h1 className="text-5xl font-heading font-bold text-center text-primary-900">
           {title}
@@ -17,12 +17,8 @@ export default function Postpage({ data }) {
             day: "numeric",
           })}
         </p>
-
-        <div className="mt-8 text-justify leading-relaxed">
-          <p>{description}</p>
-        </div>
         {newsImg && (
-          <div className="mt-8 mb-16">
+          <div className="mt-8 ">
             <Image
               src={newsImg}
               alt={title}
@@ -32,6 +28,9 @@ export default function Postpage({ data }) {
             />
           </div>
         )}
+        <div className="mt-8 text-justify leading-relaxed">
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );
