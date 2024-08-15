@@ -10,12 +10,12 @@ export default function Navbar() {
 
   const [admissions, setAdmissions] = useState(true);
 
-  const [color, setColor] = useState(false);
+  const [color, setColor] = useState(true);
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 100) return setColor(true);
-      return setColor(false);
+      if (window.scrollY >= 100) return setColor(false);
+      return setColor(true);
     };
 
     window.addEventListener("scroll", changeColor);
@@ -52,7 +52,11 @@ export default function Navbar() {
         )}
 
         <header
-          className={color ? "header-wrapper header-bg" : "header-wrapper"}
+          className={
+            currentRoute === "/" && color
+              ? "header-wrapper"
+              : "header-wrapper header-bg"
+          }
         >
           <div className="img-label">
             <Link href={"/"}>
