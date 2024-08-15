@@ -63,7 +63,6 @@ export default function Contact() {
           method="POST"
           netlify
           netlify-honeypot="bot-field"
-          action="/thank-you"
           className="max-w-md"
         >
           <p className="border-b-2 border-primary-900  ">
