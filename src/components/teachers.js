@@ -16,7 +16,7 @@ export default function Teachers({ data }) {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row mt-[120px] mb-14 md:pl-12 md:pr-12 pl-6 pr-6">
+      <div className="flex flex-col md:flex-row md:mt-[120px] mt-12 mb-14 md:pl-12 md:pr-12 pl-6 pr-6">
         <h1 className="text-4xl md:text-5xl tracking-tight p900 to-primary-900 font-semibold">
           {data.teachers}
         </h1>

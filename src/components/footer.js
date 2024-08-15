@@ -6,7 +6,7 @@ import Logo from "@/icons/Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper pl-12 pr-12">
+    <footer className="footer-wrapper md:pl-12 md:pr-12 pl-6 pr-6">
       <div className="footer-block-wrapper">
         <figure className="footer-img-label">
           <div className="">
@@ -19,7 +19,7 @@ export default function Footer() {
         </figure>
         <a
           href="https://www.linkedin.com/in/debangan-banerjee/"
-          className="socials-mine"
+          className="socials-mine md:flex hidden"
         >
           © 2024 | Developed by Debangan
         </a>
@@ -52,6 +52,12 @@ export default function Footer() {
           </li>
         </ul>
       </label>
+      <a
+        href="https://www.linkedin.com/in/debangan-banerjee/"
+        className="socials-mine flex md:hidden"
+      >
+        © 2024 | Developed by Debangan
+      </a>
     </footer>
   );
 }

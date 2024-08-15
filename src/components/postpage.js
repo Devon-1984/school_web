@@ -6,11 +6,11 @@ export default function Postpage({ data }) {
 
   return (
     <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
-      <div className="max-w-3xl mx-auto mt-[170px]">
+      <div className="flex flex-col items-center max-w-6xl mx-auto mt-[170px]">
         <h1 className="text-5xl font-heading font-bold text-center text-primary-900">
           {title}
         </h1>
-        <p className="text-center text-lg text-primary-900 mt-2">
+        <p className="text-justify text-lg text-primary-900 mt-2">
           {new Date(date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -28,7 +28,7 @@ export default function Postpage({ data }) {
             />
           </div>
         )}
-        <div className="mt-8 text-justify leading-relaxed">
+        <div className="mt-8 text-justify max-w-3xl leading-relaxed">
           <p>{description}</p>
         </div>
       </div>
