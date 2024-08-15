@@ -6,7 +6,7 @@ export default function Postpage({ data }) {
 
   return (
     <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
-      <div className="max-w-3xl mx-auto mt-20">
+      <div className="max-w-3xl mx-auto mt-[170px]">
         <h1 className="text-5xl font-heading font-bold text-center text-primary-900">
           {title}
         </h1>

@@ -8,7 +8,7 @@ const Accordion = ({ title, desc, img }) => {
     <div className="pb-2 pt-4 border-b border-solid border-primary-900 text-primary-900 max-w-[750px]">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-[-webkit-fill-available]"
+        className="flex justify-between w-[-webkit-fill-available] fox"
         // w-[-moz-available]
       >
         <span className="font-medium">{title}</span>
@@ -49,8 +49,10 @@ const Accordion = ({ title, desc, img }) => {
           <Image
             className="aspect-auto rounded gap-0 object-fill"
             src={img}
-            width={500}
-            height={500}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
           />
           <div className="">{desc}</div>
         </div>
