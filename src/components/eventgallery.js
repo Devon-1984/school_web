@@ -23,7 +23,7 @@ export default function EventGallery({ images }) {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div>
-        <div className="mt-6 max-w-5xl mx-auto grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-6">
+        <div className="mt-6 max-w-5xl mx-auto grid gap-4 md:grid-cols-3 grid-cols-2 px-6">
           {images.map((image, index) => (
             <a
               key={index}
