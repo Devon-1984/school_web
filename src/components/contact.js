@@ -58,7 +58,15 @@ export default function Contact() {
           </div>
         </div>
 
-        <form name="contact" method="POST" netlify className="max-w-md">
+        <form
+          name="contact-form"
+          method="POST"
+          netlify
+          netlify-honeypot="bot-field"
+          hidden
+          action="/thank-you"
+          className="max-w-md"
+        >
           <p className="border-b-2 border-primary-900  ">
             <input
               type="email"
