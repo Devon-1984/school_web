@@ -8,8 +8,10 @@ export default function Intro({ data }) {
         <Image
           className="md:max-w-sm"
           src={data.aboutImg}
-          width={1200}
-          height={1200}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
         />
         <div className="mr-auto mt-auto mb-auto">
           <div className="mt-6 mb-6 font-heading font-medium text-4xl md:text-6xl md:mb-14">

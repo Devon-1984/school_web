@@ -9,7 +9,7 @@ export default function Contact() {
             Contact Us
           </h1>
         </div>
-        <div className="flex md:mb-12 mb-6 font-body font-normal text-primary-900 text-base">
+        <div className="flex md:mb-10 mb-6 font-body font-normal text-primary-900 text-base">
           <div className="flex pr-5 md:pr-10">
             <svg
               className="mr-1 md:mr-3"
@@ -93,7 +93,7 @@ export default function Contact() {
           </p>
           <p>
             <button
-              className="button py-2 px-5 md:px-10 md:py-4 mt-12"
+              className="button py-2 px-5 md:px-10 md:py-4 mt-10"
               type="submit"
             >
               Submit
