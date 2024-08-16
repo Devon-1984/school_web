@@ -10,7 +10,7 @@ export default function Contact() {
           </h1>
         </div>
         <div className="flex md:mb-10 mb-6 font-body font-normal text-primary-900 text-base">
-          <div className="flex pr-5 md:pr-10">
+          <a href="mailto:deb100.db@gmail.com" className="flex pr-5 md:pr-10">
             <svg
               className="mr-1 md:mr-3"
               width="24"
@@ -35,7 +35,7 @@ export default function Contact() {
               />
             </svg>
             <p>Email Us</p>
-          </div>
+          </a>
           <div className="flex">
             <svg
               className="mr-1 md:mr-3"
