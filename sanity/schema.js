@@ -10,6 +10,8 @@ import { Boardpage } from "./schemas/board";
 
 import { Noticepage } from "./schemas/notices";
 
+import { Contactpage } from "./schemas/contact";
+
 export const schema = {
   types: [
     homepageType,
@@ -19,5 +21,6 @@ export const schema = {
     Facultypage,
     Boardpage,
     Noticepage,
+    Contactpage,
   ],
 };

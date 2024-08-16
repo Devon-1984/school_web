@@ -6,19 +6,36 @@ export const Contactpage = defineType({
   type: "document",
   fields: [
     defineField({
-      name: "ourTeacher",
-      title: "Teacher",
+      name: "title",
+      title: "Title",
       type: "string",
     }),
     defineField({
-      name: "teachImg",
-      title: "Image",
-      type: "image",
+      name: "email",
+      title: "Email",
+      type: "string",
+      validation: (Rule) => Rule.required().email(),
+    }),
+
+    defineField({
+      name: "phoneNumber",
+      title: "Phone Number",
+      type: "string",
+      validation: (Rule) =>
+        Rule.required().regex(/^\+?[1-9]\d{1,14}$/, {
+          name: "phone number", // Error message
+          invert: false, // Set to true to enforce that the pattern does not match
+        }),
     }),
     defineField({
-      name: "role",
-      title: "Role",
+      name: "addr",
+      title: "Address",
       type: "text",
+    }),
+    defineField({
+      name: "social",
+      title: "Facebook",
+      type: "string",
     }),
   ],
 });

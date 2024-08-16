@@ -40,7 +40,7 @@ export default function Footer() {
             Vill + P.O Sahudangi, <br />
             Jalpaiguri - 735135
           </li>
-          <li>sdhpkr@gmailcom</li>
+          <li>sdhpkr@gmail.com</li>
           <li>
             <div className="socials">
               Socials:

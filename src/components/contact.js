@@ -1,16 +1,17 @@
 import React from "react";
 
-export default function Contact() {
+export default function Contact({ data }) {
+  const mailtoLink = `mailto:${data.email}`;
   return (
     <>
       <div className="md:pl-12 md:pr-12 pl-6 pr-6 mb-5 md:mb-10">
         <div className="mt-[170px] mb-10">
           <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold">
-            Contact Us
+            {data.title}
           </h1>
         </div>
         <div className="flex md:mb-10 mb-6 font-body font-normal text-primary-900 text-base">
-          <a href="mailto:deb100.db@gmail.com" className="flex pr-5 md:pr-10">
+          <a href={mailtoLink} className="flex pr-5 md:pr-10">
             <svg
               className="mr-1 md:mr-3"
               width="24"
@@ -54,7 +55,7 @@ export default function Contact() {
               />
             </svg>
 
-            <p>122 348 1910</p>
+            <p>{data.phoneNumber}</p>
           </div>
         </div>
 
