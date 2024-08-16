@@ -52,7 +52,7 @@ const Accordion = ({ title, desc, img }) => {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "50%", height: "auto" }}
           />
           <div className="">{desc}</div>
         </div>
