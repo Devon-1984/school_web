@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { "NODE_ENV" = "production" }
+
+[[redirects]]
+  from = "/sanity/*"
+  to = "/studio.html"
+  status = 301
+  force = true
