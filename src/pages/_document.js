@@ -7,6 +7,13 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="email" name="email" />
+          <input type="text" name="name" />
+          <input type="tel" name="Mobile" />
+          <textarea name="message"></textarea>
+        </form>
       </body>
     </Html>
   );

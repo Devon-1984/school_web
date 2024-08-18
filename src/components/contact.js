@@ -3,6 +3,17 @@ import Map from "./map";
 
 export default function Contact({ data }) {
   const mailtoLink = `mailto:${data.email}`;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+  };
   return (
     <>
       <div className="md:pl-12 md:pr-12 pl-6 pr-6 mb-5 md:mb-10 mt-[170px] md:flex">
@@ -66,10 +77,9 @@ export default function Contact({ data }) {
             method="POST"
             netlify
             netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
             className="max-w-md"
           >
-            <input type="hidden" name="contact-form" value="contact" />
-
             <p className="border-b-2 border-primary-900  ">
               <input
                 type="email"
