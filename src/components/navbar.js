@@ -72,7 +72,7 @@ export default function Navbar() {
               >
                 <Logo width={60} height={60} />
 
-                <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px]">
+                <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px] cursor-pointer">
                   SAHUDANGI HAT <br />
                   P. K. ROY HIGH SCHOOL
                 </label>
