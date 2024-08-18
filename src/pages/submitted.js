@@ -8,7 +8,7 @@ export default function Submitted({ data }) {
   return (
     <>
       <div className="md:pl-12 md:pr-12 pl-6 pr-6 mb-5 md:mb-10 mt-[170px] md:flex text-primary-900">
-        <div className="w-full">
+        <div className="w-full mb-4">
           <div className="mb-10">
             <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold">
               {data.title}
