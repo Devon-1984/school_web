@@ -66,13 +66,17 @@ export default function Navbar() {
         >
           <div className="flex flex-col md:flex-row md:flex md:items-center ">
             <div className="img-label flex items-center font-bold">
-              <Link href={"/"}>
+              <Link
+                className="img-label flex items-center font-bold"
+                href={"/"}
+              >
                 <Logo width={60} height={60} />
+
+                <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px]">
+                  SAHUDANGI HAT <br />
+                  P. K. ROY HIGH SCHOOL
+                </label>
               </Link>
-              <label className="font-heading max-w-[22ch] leading-[1.15] text-[12px]">
-                SAHUDANGI HAT <br />
-                P. K. ROY HIGH SCHOOL
-              </label>
               <div className="md:hidden ml-auto">
                 <button onClick={toggleMenu} className="focus:outline-none">
                   <svg
