@@ -8,7 +8,7 @@ export default function Contact({ data }) {
 
     const formData = new FormData(event.target);
 
-    await fetch("/", {
+    await fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
@@ -74,9 +74,7 @@ export default function Contact({ data }) {
 
           <form
             name="contact-form"
-            method="POST"
             netlify
-            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="max-w-md"
           >
