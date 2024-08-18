@@ -110,7 +110,7 @@ export default function Contact({ data }) {
             </p>
           </form>
         </div>
-        <div className="ml-auto mt-6 w-full">
+        <div className="ml-auto mt-6 md:mr-6 w-full">
           <Map />
         </div>
       </div>
