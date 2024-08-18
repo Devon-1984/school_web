@@ -68,6 +68,8 @@ export default function Contact({ data }) {
             netlify-honeypot="bot-field"
             className="max-w-md"
           >
+            <input type="hidden" name="form-name" value="contact" />
+
             <p className="border-b-2 border-primary-900  ">
               <input
                 type="email"
