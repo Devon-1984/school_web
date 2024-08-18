@@ -1,5 +1,6 @@
 import React from "react";
 import Map from "./map";
+import Link from "next/link";
 
 export default function Contact({ data }) {
   const mailtoLink = `mailto:${data.email}`;
@@ -8,24 +9,11 @@ export default function Contact({ data }) {
 
     const formData = new FormData(event.target);
 
-    try {
-      const response = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-
-      if (response.ok) {
-        // Redirect to the /submitted page after a successful submission
-        window.location.href = "/submitted";
-      } else {
-        // Handle errors (e.g., show an error message to the user)
-        console.error("Form submission failed");
-      }
-    } catch (error) {
-      // Handle network errors or other unexpected issues
-      console.error("An error occurred:", error);
-    }
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
   };
   return (
     <>
@@ -124,12 +112,14 @@ export default function Contact({ data }) {
               ></textarea>
             </p>
             <p>
-              <button
-                className="button py-2 px-5 md:px-10 md:py-4 mt-10"
-                type="submit"
-              >
-                Submit
-              </button>
+              <Link href={"/submitted"}>
+                <button
+                  className="button py-2 px-5 md:px-10 md:py-4 mt-10"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </Link>
             </p>
           </form>
         </div>
