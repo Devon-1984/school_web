@@ -20,7 +20,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 100) return setColor(false);
+      if (window.scrollY >= 40) return setColor(false);
       return setColor(true);
     };
 
