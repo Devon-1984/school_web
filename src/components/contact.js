@@ -32,6 +32,7 @@ export default function Contact({ data }) {
             <form
               name="contact-form"
               netlify
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="max-w-md"
             >
