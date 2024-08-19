@@ -38,6 +38,7 @@ export default function Contact({ data }) {
               onSubmit={handleSubmit}
               className="max-w-md"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <p className="border-b-2 border-primary-900">
                 <input
                   type="email"
