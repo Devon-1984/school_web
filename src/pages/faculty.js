@@ -24,5 +24,9 @@ export async function getStaticProps() {
   board,
 }`;
   const data = await sanityFetch({ query });
-  return { props: { data } };
+
+  const shuffledFaculty = data.faculty.sort(() => 0.5 - Math.random());
+  data.faculty = shuffledFaculty;
+
+  return { props: { data: { ...data, faculty: shuffledFaculty } } };
 }

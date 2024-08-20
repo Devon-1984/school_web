@@ -37,8 +37,8 @@ export async function getStaticProps() {
 }`;
   const data = await sanityFetch({ query });
 
-  const shuffledFaculty = data.faculty.sort(() => 0.6 - Math.random());
-  const selectedFaculty = shuffledFaculty.slice(0, 6);
+  const shuffledFaculty = data.faculty.sort(() => 0.5 - Math.random());
+  const selectedFaculty = shuffledFaculty.slice(0, 7);
 
   data.faculty = selectedFaculty;
 
