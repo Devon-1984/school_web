@@ -17,7 +17,7 @@ export default function about({ data }) {
 export async function getStaticProps() {
   const query = `*[_type == 'aboutpage'][0] {
   teachers,
-  "faculty":*[_type == 'facultypage'][0..4] {
+  "faculty":*[_type == 'facultypage'] {
   ourTeacher,
   role,
   "teachImg":teachImg.asset->url},

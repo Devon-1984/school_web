@@ -11,7 +11,6 @@ import "swiper/css/autoplay";
 import Image from "next/image";
 
 export default function Teachers({ data }) {
-  const teachers = data.faculty;
   const Board = data.Board;
 
   return (
@@ -33,7 +32,7 @@ export default function Teachers({ data }) {
           slides-per-view={3.5}
           breakpoints={{
             995: {
-              slidesPerView: 3.5,
+              slidesPerView: 4.5,
             },
           }}
           slidesOffsetBefore={48}
@@ -42,7 +41,7 @@ export default function Teachers({ data }) {
           // navigation={{ clickable: true }}
           className=""
         >
-          {teachers.map((teacher, index) => (
+          {data.faculty.map((teacher, index) => (
             <SwiperSlide key={index} className="">
               <div className="text-left">
                 <div className="pos-rel rounded aspect-square overflow">

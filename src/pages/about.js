@@ -25,7 +25,7 @@ export async function getStaticProps() {
   principalDescription,
   "principalImg":principalImg.asset->url,
   teachers,
-  "faculty":*[_type == 'facultypage'][0..4] {
+  "faculty":*[_type == 'facultypage'] {
   ourTeacher,
   role,
   "teachImg":teachImg.asset->url},
@@ -36,5 +36,11 @@ export async function getStaticProps() {
   "boardImg":boardImg.asset->url},
 }`;
   const data = await sanityFetch({ query });
-  return { props: { data } };
+
+  const shuffledFaculty = data.faculty.sort(() => 0.6 - Math.random());
+  const selectedFaculty = shuffledFaculty.slice(0, 6);
+
+  data.faculty = selectedFaculty;
+
+  return { props: { data: { ...data, faculty: selectedFaculty } } };
 }
