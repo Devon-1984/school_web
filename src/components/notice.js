@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Notices({ data }) {
   return (
-    <div className="pl-6 pr-6 md:pl-12 md:pr-12 md:mb-48 mb-24">
+    <div className="p-6 md:p-12 md:mb-48 mb-24">
       <div className="grid grid-cols-1 gap-y-2">
         {data.map((item, index) => (
           <div
