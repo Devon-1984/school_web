@@ -18,14 +18,14 @@ export default function Event({ data }) {
 export async function getStaticProps() {
   const query = `*[_type == 'homepage'][0]{
       newsTitle,
-      "news":*[_type == 'newspage']{
+      "news":*[_type == 'newspage'] | order(_updatedAt desc){
       "newsImg":newsImg.asset->url,
         title,
         description,
         date,
         slug
       }
-}`;
+  }`;
   const data = await sanityFetch({ query });
   return { props: { data } };
 }

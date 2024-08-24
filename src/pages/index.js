@@ -33,14 +33,13 @@ export async function getStaticProps() {
       gallery[]{asset->{url}},
       newsTitle,
       
-      "news":*[_type == 'newspage'][0..2]{
+      "news":*[_type == 'newspage']| order(_updatedAt desc)[0..2]{
       "newsImg":newsImg.asset->url,
         title,
         description,
         date,
         slug
-      }
-    }`;
+}}`;
   const data = await sanityFetch({ query });
   return { props: { data } };
 }
