@@ -7,14 +7,14 @@ export default function Facultyg({ data }) {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 md:p-12 ">
         {teachersData.map((teacher, index) => (
-          <div className="bg-white rounded-lg overflow-hidden" key={index}>
+          <div className="bg-white  overflow-hidden" key={index}>
             {/* <img
               src={teacher.teachImg}
               alt={teacher.ourTeacher}
               className="w-full object-cover"
             /> */}
             <Image
-              className="w-full object-cover"
+              className="w-full object-cover rounded-lg aspect-square"
               src={teacher.teachImg}
               width={0}
               height={0}

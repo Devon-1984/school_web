@@ -8,11 +8,6 @@ export default function Events({ data }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 md:p-12 text-primary-900">
         {newsData.map((news, index) => (
           <div className="bg-white overflow-hidden" key={index}>
-            {/* <img
-              src={news.newsImg}
-              alt={news.title}
-              className="w-full aspect-video rounded-lg object-cover"
-            /> */}
             <Image
               className="aspect-video rounded-lg object-cover"
               src={news.newsImg}
