@@ -15,7 +15,7 @@ export default function Principal({ data }) {
           <div className="mt-6 mb-6 font-heading font-medium text-4xl md:text-5xl md:mb-14">
             {data.principal}
           </div>
-          <div className="font-body text-lg max-w-xl">
+          <div className="font-body text-lg max-w-[50rem]">
             {data.principalDescription}
           </div>
         </div>
