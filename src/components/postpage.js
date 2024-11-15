@@ -29,7 +29,7 @@ export default function Postpage({ data }) {
           </div>
         )}
         <div className="mt-8 text-justify max-w-3xl leading-relaxed">
-          <p>{description}</p>
+          <p className="text-lg">{description}</p>
         </div>
       </div>
     </div>
