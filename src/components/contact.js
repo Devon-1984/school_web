@@ -40,7 +40,7 @@ export default function Contact({ data }) {
             03561244212(OFFICE)/9531740569(H.M)
           </div>
           <svg
-            className="w-72 h-72 pt-7 pb-3"
+            className="w-80 h-60 pt-4 pb-3"
             fill="#1f3830"
             version="1.1"
             id="Layer_1"
