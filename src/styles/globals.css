@@ -209,7 +209,7 @@ h4,
 
 .footer-wrapper {
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
   background: var(--primary-900);
   padding-block: 60px;
   color: var(--white);

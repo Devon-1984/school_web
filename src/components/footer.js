@@ -105,10 +105,15 @@ export default function Footer() {
             </Link>
           </button>
         </div>
-        <ul className="footer-list">
+        <ul className="footer-list text-[10px]">
           <li>
-            Vill + P.O Sahudangi, <br />
-            Jalpaiguri - 735135
+            SAHUDANGI HAT P.K.ROY HIGH SCHOOL
+            <br />
+            P.O.-SAHUDANGI HAT <br />
+            P.S- NJP <br />
+            DISTRICT- JALPAIGURI <br />
+            PIN-735135 <br />
+            03561244212(OFFICE)/9531740569(H.M)
           </li>
           <li>sdhpkr@gmail.com</li>
           <li>
