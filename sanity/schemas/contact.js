@@ -21,11 +21,6 @@ export const Contactpage = defineType({
       name: "phoneNumber",
       title: "Phone Number",
       type: "string",
-      validation: (Rule) =>
-        Rule.required().regex(/^\+?[1-9]\d{1,14}$/, {
-          name: "phone number", // Error message
-          invert: false, // Set to true to enforce that the pattern does not match
-        }),
     }),
     defineField({
       name: "addr",

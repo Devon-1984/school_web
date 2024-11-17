@@ -10,7 +10,7 @@ export default function Contacttitle({ data }) {
           {data.title}
         </h1>
       </div>
-      <div className="flex md:mb-10 mb-6 font-body font-normal text-primary-900 text-base">
+      <div className="flex mb-4 font-body font-normal text-primary-900 text-base">
         <a href={mailtoLink} className="flex pr-5 md:pr-10">
           <svg
             className="mr-1 md:mr-3"

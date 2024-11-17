@@ -21,7 +21,7 @@ export default function EventGallery({ images }) {
   };
 
   return (
-    <div className="min-h-screen flex justify-center">
+    <div className="flex justify-center">
       <div>
         <div className="mt-6 max-w-5xl mx-auto grid gap-4 md:grid-cols-3 grid-cols-2 px-6">
           {images.map((image, index) => (
