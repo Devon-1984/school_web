@@ -16,8 +16,8 @@ export default function Events({ data }) {
               sizes="100vw"
               style={{ width: "100%", height: "auto" }}
             />
-            <div className="p-4">
-              <div className="flex">
+            <div className="md:pt-4 pt-2">
+              <div className="md:flex pb-2">
                 <h3 className="text-lg font-semibold text-primary-900">
                   {news.title}
                 </h3>
