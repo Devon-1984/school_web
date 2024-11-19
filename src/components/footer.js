@@ -119,7 +119,10 @@ export default function Footer() {
           <li>
             <div className="socials">
               Socials:
-              <a href="#" className="fb-wrap">
+              <a
+                href="https://www.facebook.com/groups/458062427728690/?ref=share&mibextid=KtfwRi"
+                className="fb-wrap"
+              >
                 <Image className="fb" src={facebook} />
                 Facebook
               </a>
