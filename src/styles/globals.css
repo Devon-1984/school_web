@@ -207,14 +207,6 @@ h4,
   font-size: 12px;
 }
 
-.footer-wrapper {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  background: var(--primary-900);
-  padding-block: 60px;
-  color: var(--white);
-}
-
 .footer-img-label {
   display: flex;
   align-items: center;
@@ -613,11 +605,5 @@ h3,
   }
   .image-wrapper {
     border-radius: 4px 4px 0px 0px;
-  }
-
-  .footer-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding-block: 30px;
   }
 }
