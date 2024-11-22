@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/utils/sanity";
+import Link from "next/link";
 
 export default function Events({ data }) {
-  // Preprocess imageProps for all news items
   const newsWithImageProps = data.news.map((news) => ({
     ...news,
     imageProps: useNextSanityImage(client, news.newsImg),
