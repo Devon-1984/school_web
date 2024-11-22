@@ -13,6 +13,7 @@ export default function Hero({ data }) {
         <div className="hero-img">
           <Image
             {...imageProps}
+            className="w-full h-full object-cover"
             alt={data.heroTitle}
             placeholder="blur"
             blurDataURL={data.heroImgUrl.asset.metadata.lqip}
