@@ -1,15 +1,24 @@
 import React from "react";
-import hero from "../../public/hero-img.png";
 import Image from "next/image";
-import Link from "next/link";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/utils/sanity";
 
 export default function Hero({ data }) {
   const stats = data.heroStats.map((stat) => stat.stat_description);
+  const imageProps = useNextSanityImage(client, data.heroImgUrl);
 
   return (
     <div className="w-100vw pos-rel">
       <div className="hero-img-wrapper">
-        <Image className="hero-img" src={data.heroImgUrl} sizes="100vw" fill />
+        <div className="hero-img">
+          <Image
+            {...imageProps}
+            alt={data.heroTitle}
+            placeholder="blur"
+            blurDataURL={data.heroImgUrl.asset.metadata.lqip}
+            sizes="100vw"
+          />
+        </div>
         <div className="hero-heading-wrapper">
           <h4 className="hero-heading font-semibold">{data.heroTitle}</h4>
         </div>

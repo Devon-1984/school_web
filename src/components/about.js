@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/utils/sanity";
 import Link from "next/link";
 
 export default function About({ data }) {
+  const imageProps = useNextSanityImage(client, data.aboutImgUrl);
+
   return (
     <>
       <div className="about-wrapper p40">
@@ -16,10 +20,11 @@ export default function About({ data }) {
         </div>
         <div className="pos-rel image-wrapper w-50 ratio-1-1 overflow">
           <Image
+            {...imageProps}
             className="about-img"
-            src={data.aboutImgUrl}
+            placeholder="blur"
+            blurDataURL={data.heroImgUrl.asset.metadata.lqip}
             sizes="40vw"
-            fill
             objectFit="cover"
           />
         </div>

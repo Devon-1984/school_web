@@ -347,6 +347,7 @@ h4,
   height: 100%;
   display: grid;
   place-content: center;
+  z-index: 6;
 }
 
 .stats {

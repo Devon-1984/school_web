@@ -119,62 +119,8 @@ export default function Contact({ data }) {
               </g>
             </g>
           </svg>
-
-          {/* {submitted ? (
-            <form
-              name="contact-form"
-              netlify
-              netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-              className="max-w-md"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="border-b-2 border-primary-900">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none py-2 md:py-4"
-                />
-              </p>
-              <p className="border-b-2 border-primary-900">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none py-2 md:py-4"
-                />
-              </p>
-              <p className="border-b-2 border-primary-900">
-                <input
-                  type="tel"
-                  name="Mobile"
-                  placeholder="Mobile"
-                  className="placeholder-primary-900 text-primary-900 mt-1 w-full focus:outline-none py-2 md:py-4"
-                />
-              </p>
-              <p>
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  rows="4"
-                  className="placeholder-primary-900 text-primary-900 mt-1 block w-full border-b-2 border-primary-900 focus:outline-none py-2 md:py-4"
-                ></textarea>
-              </p>
-              <p>
-                <button
-                  className="button py-2 px-5 md:px-10 md:py-4 mt-10"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </p>
-            </form>
-          ) : (
-            <Submitted />
-          )} */}
         </div>
-        <div className="ml-auto mt-6 md:mr-6 w-full">
+        <div className="aspect-[4/3] overflow-hidden rounded-lg w-full">
           <Map />
         </div>
       </div>

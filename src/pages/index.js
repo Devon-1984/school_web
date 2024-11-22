@@ -24,17 +24,32 @@ export default function Home({ data }) {
 export async function getStaticProps() {
   const query = `*[_type == 'homepage'][0]{
     heroTitle,
-    "heroImgUrl":heroImg.asset->url,
+    "heroImgUrl":heroImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
       heroSubtitle,
       announcementText,
       heroStats,
       about,
-      "aboutImgUrl":aboutImg.asset->url,
+      "aboutImgUrl":aboutImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
       gallery[]{asset->{url}},
       newsTitle,
       
       "news":*[_type == 'newspage']| order(_updatedAt desc)[0..2]{
-      "newsImg":newsImg.asset->url,
+      "newsImg":newsImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
         title,
         description,
         date,
