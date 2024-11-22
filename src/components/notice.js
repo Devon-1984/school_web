@@ -9,9 +9,15 @@ export default function Notices({ data }) {
             key={index}
             className="grid grid-cols-3 items-center border-b text-primary-900 font-medium py-2"
           >
-            <div className="">{item.title}</div>
-            <div className=" text-center">{item.date}</div>
-            <a href={item.pdfFileURL} className=" flex justify-end">
+            <p className="text-balance leading-[1.2em]">{item.title}</p>
+            <p className=" text-center">{item.date}</p>
+            <a
+              download
+              target="_blank"
+              rel="norefferer"
+              href={item.pdfFileURL}
+              className=" flex justify-end"
+            >
               <svg
                 width="24"
                 height="24"
