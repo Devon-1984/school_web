@@ -30,7 +30,8 @@ export default function Contact({ data }) {
       <div className="md:pl-12 md:pr-12 pl-6 pr-6 mb-5 md:mb-10 mt-[170px] md:flex text-primary-900">
         <div className="w-full">
           <Title data={data} />
-          <div className="text-[1rem] md:text-lg font-semibold leading-tight">
+
+          {/* <div className="text-[1rem] md:text-lg font-semibold leading-tight">
             SAHUDANGI HAT P.K.ROY HIGH SCHOOL
             <br />
             P.O.-SAHUDANGI HAT <br />
@@ -118,7 +119,7 @@ export default function Contact({ data }) {
                 </g>
               </g>
             </g>
-          </svg>
+          </svg> */}
         </div>
         <div className="aspect-[4/3] overflow-hidden rounded-lg w-full">
           <Map />

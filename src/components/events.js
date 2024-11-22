@@ -33,7 +33,7 @@ function EventCard({ news }) {
           <h3 className="text-lg font-semibold text-primary-900 text-balance leading-[1.2em]">
             {news.title}
           </h3>
-          <p className="text-primary-900 text-sm font-semibold ml-auto min-w-max text-right">
+          <p className="text-primary-900 text-sm font-semibold ml-auto min-w-max md:text-right">
             {new Date(news.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
