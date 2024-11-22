@@ -19,7 +19,12 @@ export async function getStaticProps() {
   const query = `*[_type == 'homepage'][0]{
       newsTitle,
       "news":*[_type == 'newspage'] | order(_updatedAt desc){
-      "newsImg":newsImg.asset->url,
+      "newsImg":newsImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
         title,
         description,
         date,
