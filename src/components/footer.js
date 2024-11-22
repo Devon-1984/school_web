@@ -105,7 +105,7 @@ export default function Footer() {
             </Link>
           </button>
         </div>
-        <ul className="footer-list text-[6px] md:text-[10px]">
+        <ul className="footer-list text-[6px] md:text-[12px]">
           <li>
             SAHUDANGI HAT P.K.ROY HIGH SCHOOL
             <br />
