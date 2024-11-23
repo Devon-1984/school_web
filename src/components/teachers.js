@@ -14,6 +14,12 @@ import Image from "next/image";
 export default function Teachers({ data }) {
   const Board = data.Board;
 
+  // Preprocess image props for all faculty members
+  const facultyWithImageProps = data.faculty.map((teacher) => ({
+    ...teacher,
+    imageProps: useNextSanityImage(client, teacher.teachImg),
+  }));
+
   return (
     <>
       <div className="flex flex-col md:flex-row md:mt-[120px] mt-12 mb-14 md:pl-12 md:pr-12 pl-6 pr-6">
@@ -40,28 +46,25 @@ export default function Teachers({ data }) {
           spaceBetween={20}
           className=""
         >
-          {data.faculty.map((teacher, index) => {
-            const imageProps = useNextSanityImage(client, teacher.teachImg);
-            return (
-              <SwiperSlide key={index} className="">
-                <div className="text-left">
-                  <div className="pos-rel rounded aspect-square overflow">
-                    <Image
-                      {...imageProps}
-                      className="w-full h-full object-cover"
-                      placeholder="blur"
-                      blurDataURL={teacher.teachImg.asset.metadata.lqip}
-                      sizes="40vw"
-                    />
-                  </div>
-                  <div className="text-lg font-semibold text-primary-900">
-                    {teacher.ourTeacher}
-                  </div>
-                  <div className="text-primary-900">{teacher.role}</div>
+          {facultyWithImageProps.map((teacher, index) => (
+            <SwiperSlide key={index} className="">
+              <div className="text-left">
+                <div className="pos-rel rounded aspect-square overflow">
+                  <Image
+                    {...teacher.imageProps}
+                    className="w-full h-full object-cover"
+                    placeholder="blur"
+                    blurDataURL={teacher.teachImg.asset.metadata.lqip}
+                    sizes="40vw"
+                  />
                 </div>
-              </SwiperSlide>
-            );
-          })}
+                <div className="text-lg font-semibold text-primary-900">
+                  {teacher.ourTeacher}
+                </div>
+                <div className="text-primary-900">{teacher.role}</div>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="m-6 md:m-12 md:flex">
