@@ -40,30 +40,11 @@ export default function Teachers({ data }) {
           spaceBetween={20}
           className=""
         >
-          {data.faculty.map((teacher, index) => {
-            // Move hook inside map
-            const imageProps = useNextSanityImage(client, teacher.teachImg);
-
-            return (
-              <SwiperSlide key={index} className="">
-                <div className="text-left">
-                  <div className="pos-rel rounded aspect-square overflow">
-                    <Image
-                      {...imageProps}
-                      className="w-full h-full object-cover"
-                      placeholder="blur"
-                      blurDataURL={teacher.teachImg.asset.metadata.lqip}
-                      sizes="40vw"
-                    />
-                  </div>
-                  <div className="text-lg font-semibold text-primary-900">
-                    {teacher.ourTeacher}
-                  </div>
-                  <div className="text-primary-900">{teacher.role}</div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {data.faculty.map((teacher, index) => (
+            <SwiperSlide key={index}>
+              <TeacherCard teacher={teacher} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="m-6 md:m-12 md:flex">
@@ -84,5 +65,28 @@ export default function Teachers({ data }) {
         </div>
       </div>
     </>
+  );
+}
+
+function TeacherCard({ teacher }) {
+  // Safely use the hook here
+  const imageProps = useNextSanityImage(client, teacher.teachImg);
+
+  return (
+    <div className="text-left">
+      <div className="pos-rel rounded aspect-square overflow">
+        <Image
+          {...imageProps}
+          className="w-full h-full object-cover"
+          placeholder="blur"
+          blurDataURL={teacher.teachImg.asset.metadata.lqip}
+          sizes="40vw"
+        />
+      </div>
+      <div className="text-lg font-semibold text-primary-900">
+        {teacher.ourTeacher}
+      </div>
+      <div className="text-primary-900">{teacher.role}</div>
+    </div>
   );
 }
