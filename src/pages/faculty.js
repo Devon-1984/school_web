@@ -20,7 +20,12 @@ export async function getStaticProps() {
   "faculty":*[_type == 'facultypage'] {
   ourTeacher,
   role,
-  "teachImg":teachImg.asset->url},
+  "teachImg":teachImg{
+					asset->{
+						...,
+						metadata
+					}
+				}},
   board,
 }`;
   const data = await sanityFetch({ query });

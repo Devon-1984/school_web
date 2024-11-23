@@ -1,13 +1,14 @@
 import React from "react";
 import Accordion from "@/components/accordion";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/utils/sanity";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css/autoplay";
 import Image from "next/image";
 
 export default function Teachers({ data }) {
@@ -21,7 +22,6 @@ export default function Teachers({ data }) {
         </h1>
         <div className="news-para-wrapper ml-auto">
           <button className="button py-2.5 px-4">
-            {" "}
             <Link href={"/faculty"}>View All Teachers</Link>
           </button>
         </div>
@@ -29,7 +29,7 @@ export default function Teachers({ data }) {
       <div className="cursor-grab">
         <Swiper
           modules={[Pagination, Navigation]}
-          slides-per-view={3.5}
+          slidesPerView={3.5}
           breakpoints={{
             995: {
               slidesPerView: 4.5,
@@ -38,27 +38,30 @@ export default function Teachers({ data }) {
           slidesOffsetBefore={48}
           slidesOffsetAfter={48}
           spaceBetween={20}
-          // navigation={{ clickable: true }}
           className=""
         >
-          {data.faculty.map((teacher, index) => (
-            <SwiperSlide key={index} className="">
-              <div className="text-left">
-                <div className="pos-rel rounded aspect-square overflow">
-                  <Image
-                    src={teacher.teachImg}
-                    fill
-                    objectFit="cover"
-                    sizes="40vw"
-                  />
+          {data.faculty.map((teacher, index) => {
+            const imageProps = useNextSanityImage(client, teacher.teachImg);
+            return (
+              <SwiperSlide key={index} className="">
+                <div className="text-left">
+                  <div className="pos-rel rounded aspect-square overflow">
+                    <Image
+                      {...imageProps}
+                      className="w-full h-full object-cover"
+                      placeholder="blur"
+                      blurDataURL={teacher.teachImg.asset.metadata.lqip}
+                      sizes="40vw"
+                    />
+                  </div>
+                  <div className="text-lg font-semibold text-primary-900">
+                    {teacher.ourTeacher}
+                  </div>
+                  <div className="text-primary-900">{teacher.role}</div>
                 </div>
-                <div className="text-lg font-semibold text-primary-900">
-                  {teacher.ourTeacher}
-                </div>
-                <div className="text-primary-900">{teacher.role}</div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className="m-6 md:m-12 md:flex">
