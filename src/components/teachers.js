@@ -29,7 +29,7 @@ export default function Teachers({ data }) {
       <div className="cursor-grab">
         <Swiper
           modules={[Pagination, Navigation]}
-          slidesPerView={3.5}
+          slidesPerView={1.5}
           breakpoints={{
             995: {
               slidesPerView: 4.5,
@@ -69,7 +69,6 @@ export default function Teachers({ data }) {
 }
 
 function TeacherCard({ teacher }) {
-  // Safely use the hook here
   const imageProps = useNextSanityImage(client, teacher.teachImg);
 
   return (
