@@ -21,6 +21,7 @@ const Post = ({ data }) => {
   return (
     <>
       <Postpage data={data} />
+
       {data.gallery && data.gallery.length > 0 && (
         <EventGallery images={data.gallery} />
       )}
