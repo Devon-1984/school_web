@@ -97,7 +97,7 @@ export default function ContactInfo({ data }) {
 
           <p>Address</p>
         </div>
-        <p className="md:mt-2 mt-1 max-w-[27ch]">{data.addr}</p>
+        <p className="md:mt-2 mt-1 max-w-[24ch]">{data.addr}</p>
       </div>
     </>
   );
