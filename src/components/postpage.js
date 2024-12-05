@@ -22,7 +22,7 @@ export default function Postpage({ data }) {
             })}
           </p>
           {newsImg && (
-            <div className="mt-8 ">
+            <div className="mt-8 w-full">
               <Image
                 {...imageProps}
                 className="w-full rounded-lg object-cover"
