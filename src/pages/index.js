@@ -40,7 +40,10 @@ export async function getStaticProps() {
 						metadata
 					}
 				},
-      gallery[]{asset->{url}},
+      gallery[]{asset->{
+						...,
+						metadata
+					}},
       newsTitle,
       
       "news":*[_type == 'newspage']| order(_updatedAt desc)[0..2]{

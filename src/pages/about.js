@@ -20,15 +20,30 @@ export async function getStaticProps() {
   const query = `*[_type == 'aboutpage'][0] {
   title,
   description,
-  "aboutImg":aboutImg.asset->url,
+  "aboutImg":aboutImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
   principal,
   principalDescription,
-  "principalImg":principalImg.asset->url,
+  "principalImg":principalImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
   teachers,
   "faculty":*[_type == 'facultypage'] {
   ourTeacher,
   role,
-  "teachImg":teachImg.asset->url},
+  "teachImg":teachImg{
+					asset->{
+						...,
+						metadata
+					}
+				}},
   board,
   "Board":*[_type == 'boardpage']{
   boardName,

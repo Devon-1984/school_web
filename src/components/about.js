@@ -21,9 +21,9 @@ export default function About({ data }) {
         <div className="pos-rel image-wrapper w-50 ratio-1-1 overflow">
           <Image
             {...imageProps}
-            className="about-img"
+            className="about-img w-full h-full object-cover"
             placeholder="blur"
-            blurDataURL={data.heroImgUrl.asset.metadata.lqip}
+            blurDataURL={data.aboutImgUrl.asset.metadata.lqip}
             sizes="40vw"
             objectFit="cover"
           />
