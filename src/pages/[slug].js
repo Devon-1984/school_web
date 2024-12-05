@@ -52,7 +52,12 @@ export async function getStaticProps({ params }) {
       title,
       description,
       date,
-      "newsImg":newsImg.asset->url,
+      "newsImg":newsImg{
+					asset->{
+						...,
+						metadata
+					}
+				},
       gallery[]{asset->{url}},
     }`;
   const data = await sanityFetch({ query, params: { slug } });

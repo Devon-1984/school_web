@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/utils/sanity";
 
 export default function Postpage({ data }) {
   const { title, description, date, newsImg } = data;
+  const imageProps = useNextSanityImage(client, data.newsImg);
 
   return (
     <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
@@ -21,11 +24,11 @@ export default function Postpage({ data }) {
           {newsImg && (
             <div className="mt-8 ">
               <Image
-                src={newsImg}
-                alt={title}
-                width={800}
-                height={450}
+                {...imageProps}
                 className="w-full rounded-lg object-cover"
+                placeholder="blur"
+                blurDataURL={data.newsImg.asset.metadata.lqip}
+                sizes="60vw"
               />
             </div>
           )}
