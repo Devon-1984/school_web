@@ -23,7 +23,7 @@ export default function EventGallery({ images }) {
   return (
     <div className="flex justify-center">
       <div>
-        <div className="mt-6 max-w-4xl mx-auto grid gap-4 md:grid-cols-3 grid-cols-2 mb-20 px-6 md:px-0">
+        <div className="md:mt-6 mt-0 max-w-4xl mx-auto grid gap-4 md:grid-cols-3 grid-cols-2 mb-0 md:mb-20 px-6 md:px-0">
           {images.map((image, index) => (
             <a
               key={index}
