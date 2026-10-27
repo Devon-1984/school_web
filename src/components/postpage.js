@@ -5,7 +5,6 @@ import { client } from "@/utils/sanity";
 
 export default function Postpage({ data }) {
   const { title, description, date, newsImg } = data;
-  const imageProps = useNextSanityImage(client, data.newsImg);
 
   return (
     <div className="text-primary-900 md:pl-12 md:pr-12 pl-6 pr-6">
@@ -21,15 +20,9 @@ export default function Postpage({ data }) {
               day: "numeric",
             })}
           </p>
-          {newsImg && (
+          {newsImg?.asset && (
             <div className="mt-8 w-full">
-              <Image
-                {...imageProps}
-                className="w-full rounded-lg object-cover"
-                placeholder="blur"
-                blurDataURL={data.newsImg.asset.metadata.lqip}
-                sizes="60vw"
-              />
+              <PostImage image={newsImg} />
             </div>
           )}
           <div className="mt-8 text-justify leading-relaxed">
@@ -47,5 +40,21 @@ export default function Postpage({ data }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function PostImage({ image }) {
+  const imageProps = useNextSanityImage(client, image);
+  const blurDataURL = image.asset.metadata?.lqip;
+
+  return (
+    <Image
+      {...imageProps}
+      className="w-full rounded-lg object-cover"
+      placeholder={blurDataURL ? "blur" : "empty"}
+      blurDataURL={blurDataURL}
+      sizes="60vw"
+      alt=""
+    />
   );
 }

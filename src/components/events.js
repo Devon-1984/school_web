@@ -14,20 +14,9 @@ export default function Events({ data }) {
 }
 
 function EventCard({ news }) {
-  const imageProps = useNextSanityImage(client, news.newsImg);
   return (
     <div className="bg-white overflow-hidden">
-      <div className="">
-        <Image
-          {...imageProps}
-          className="aspect-video rounded-lg object-cover"
-          alt={news.title || "News image"}
-          placeholder="blur"
-          blurDataURL={news.newsImg.asset.metadata?.lqip}
-          sizes="20vw"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
+      {news.newsImg?.asset && <EventImage news={news} />}
       <div className="md:pt-4 pt-2">
         <div className="md:flex pb-2">
           <h3 className="text-lg font-semibold text-primary-900 text-balance leading-[1.2em]">
@@ -49,6 +38,25 @@ function EventCard({ news }) {
           Learn More →
         </a>
       </div>
+    </div>
+  );
+}
+
+function EventImage({ news }) {
+  const imageProps = useNextSanityImage(client, news.newsImg);
+  const blurDataURL = news.newsImg.asset.metadata?.lqip;
+
+  return (
+    <div>
+      <Image
+        {...imageProps}
+        className="aspect-video rounded-lg object-cover"
+        alt={news.title || "News image"}
+        placeholder={blurDataURL ? "blur" : "empty"}
+        blurDataURL={blurDataURL}
+        sizes="20vw"
+        style={{ width: "100%", height: "auto" }}
+      />
     </div>
   );
 }

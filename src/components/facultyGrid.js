@@ -14,21 +14,9 @@ export default function Facultyg({ data }) {
 }
 
 function TeacherCard({ teacher }) {
-  const imageProps = useNextSanityImage(client, teacher.teachImg);
-
   return (
     <div className="bg-white overflow-hidden">
-      <div>
-        <Image
-          {...imageProps}
-          className="aspect-square rounded-lg object-cover"
-          alt={teacher.ourTeacher || "Teacher image"}
-          placeholder="blur"
-          blurDataURL={teacher.teachImg.asset.metadata?.lqip}
-          sizes="20vw"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
+      {teacher.teachImg?.asset && <TeacherImage teacher={teacher} />}
       <div className="p-4">
         <h3 className="text-lg font-semibold text-primary-900 leading-tight">
           {teacher.ourTeacher}
@@ -36,5 +24,22 @@ function TeacherCard({ teacher }) {
         <p className="text-primary-900 text-sm">{teacher.role}</p>
       </div>
     </div>
+  );
+}
+
+function TeacherImage({ teacher }) {
+  const imageProps = useNextSanityImage(client, teacher.teachImg);
+  const blurDataURL = teacher.teachImg.asset.metadata?.lqip;
+
+  return (
+    <Image
+      {...imageProps}
+      className="aspect-square rounded-lg object-cover"
+      alt={teacher.ourTeacher || "Teacher image"}
+      placeholder={blurDataURL ? "blur" : "empty"}
+      blurDataURL={blurDataURL}
+      sizes="20vw"
+      style={{ width: "100%", height: "auto" }}
+    />
   );
 }

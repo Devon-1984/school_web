@@ -5,8 +5,6 @@ import { client } from "@/utils/sanity";
 import Link from "next/link";
 
 export default function About({ data }) {
-  const imageProps = useNextSanityImage(client, data.aboutImgUrl);
-
   return (
     <>
       <div className="about-wrapper p40">
@@ -19,16 +17,25 @@ export default function About({ data }) {
           </button>
         </div>
         <div className="pos-rel image-wrapper w-50 ratio-1-1 overflow">
-          <Image
-            {...imageProps}
-            className="about-img w-full h-full object-cover"
-            placeholder="blur"
-            blurDataURL={data.aboutImgUrl.asset.metadata.lqip}
-            sizes="40vw"
-            objectFit="cover"
-          />
+          {data.aboutImgUrl?.asset && <AboutImage image={data.aboutImgUrl} />}
         </div>
       </div>
     </>
+  );
+}
+
+function AboutImage({ image }) {
+  const imageProps = useNextSanityImage(client, image);
+  const blurDataURL = image.asset.metadata?.lqip;
+
+  return (
+    <Image
+      {...imageProps}
+      className="about-img w-full h-full object-cover"
+      placeholder={blurDataURL ? "blur" : "empty"}
+      blurDataURL={blurDataURL}
+      sizes="40vw"
+      objectFit="cover"
+    />
   );
 }

@@ -10,6 +10,8 @@ import "swiper/css/autoplay";
 import Image from "next/image";
 
 export const Gallery = ({ images }) => {
+  const availableImages = (images || []).filter((image) => image?.asset?.url);
+
   return (
     <div className="pos-rel p40 overflow br4">
       <h1 className="text-5xl tracking-tight p900 to-primary-900 font-semibold mb-14">
@@ -21,7 +23,7 @@ export const Gallery = ({ images }) => {
         pagination={{ el: ".gallery-pagination", type: "fraction" }}
         navigation={{ prevEl: ".prev-btn", nextEl: ".next-btn" }}
       >
-        {images.map((image) => (
+        {availableImages.map((image) => (
           <SwiperSlide key={image.asset.url}>
             <GalleryImageCard image={image} />
           </SwiperSlide>
@@ -68,14 +70,15 @@ export const Gallery = ({ images }) => {
 
 const GalleryImageCard = ({ image }) => {
   const imageProps = useNextSanityImage(client, image);
+  const blurDataURL = image.asset.metadata?.lqip;
 
   return (
     <div className="pos-rel br4 ratio-16-9 overflow">
       <Image
         {...imageProps}
         className="w-full h-full object-cover"
-        placeholder="blur"
-        blurDataURL={image.asset.metadata.lqip}
+        placeholder={blurDataURL ? "blur" : "empty"}
+        blurDataURL={blurDataURL}
         sizes="40vw"
       />
     </div>

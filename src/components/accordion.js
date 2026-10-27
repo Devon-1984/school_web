@@ -46,14 +46,17 @@ const Accordion = ({ title, desc, img }) => {
         }`}
       >
         <div className="overflow-hidden md:flex gap-7">
-          <Image
-            className="aspect-auto rounded md:max-w-[50%] gap-0 object-fill"
-            src={img}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-          />
+          {img && (
+            <Image
+              className="aspect-auto rounded md:max-w-[50%] gap-0 object-fill"
+              src={img}
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt=""
+              style={{ width: "100%", height: "auto" }}
+            />
+          )}
           <div className="">{desc}</div>
         </div>
       </div>

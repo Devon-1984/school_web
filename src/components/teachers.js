@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 export default function Teachers({ data }) {
-  const Board = data.Board;
+  const Board = data.Board || [];
 
   return (
     <>
@@ -69,23 +69,31 @@ export default function Teachers({ data }) {
 }
 
 function TeacherCard({ teacher }) {
-  const imageProps = useNextSanityImage(client, teacher.teachImg);
-
   return (
     <div className="text-left">
       <div className="pos-rel rounded aspect-square overflow">
-        <Image
-          {...imageProps}
-          className="w-full h-full object-cover"
-          placeholder="blur"
-          blurDataURL={teacher.teachImg.asset.metadata.lqip}
-          sizes="40vw"
-        />
+        {teacher.teachImg?.asset && <TeacherImage teacher={teacher} />}
       </div>
       <div className="text-lg font-semibold text-primary-900">
         {teacher.ourTeacher}
       </div>
       <div className="text-primary-900">{teacher.role}</div>
     </div>
+  );
+}
+
+function TeacherImage({ teacher }) {
+  const imageProps = useNextSanityImage(client, teacher.teachImg);
+  const blurDataURL = teacher.teachImg.asset.metadata?.lqip;
+
+  return (
+    <Image
+      {...imageProps}
+      className="w-full h-full object-cover"
+      placeholder={blurDataURL ? "blur" : "empty"}
+      blurDataURL={blurDataURL}
+      sizes="40vw"
+      alt={teacher.ourTeacher || "Teacher image"}
+    />
   );
 }

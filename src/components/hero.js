@@ -5,20 +5,12 @@ import { client } from "@/utils/sanity";
 
 export default function Hero({ data }) {
   const stats = data.heroStats.map((stat) => stat.stat_description);
-  const imageProps = useNextSanityImage(client, data.heroImgUrl);
 
   return (
     <div className="w-100vw pos-rel">
       <div className="hero-img-wrapper">
         <div className="hero-img">
-          <Image
-            {...imageProps}
-            className="w-full h-full object-cover"
-            alt={data.heroTitle}
-            placeholder="blur"
-            blurDataURL={data.heroImgUrl.asset.metadata.lqip}
-            sizes="100vw"
-          />
+          {data.heroImgUrl?.asset && <HeroImage data={data} />}
         </div>
         <div className="hero-heading-wrapper">
           <h4 className="hero-heading font-semibold">{data.heroTitle}</h4>
@@ -33,6 +25,22 @@ export default function Hero({ data }) {
         ))}
       </div>
     </div>
+  );
+}
+
+function HeroImage({ data }) {
+  const imageProps = useNextSanityImage(client, data.heroImgUrl);
+  const blurDataURL = data.heroImgUrl.asset.metadata?.lqip;
+
+  return (
+    <Image
+      {...imageProps}
+      className="w-full h-full object-cover"
+      alt={data.heroTitle || ""}
+      placeholder={blurDataURL ? "blur" : "empty"}
+      blurDataURL={blurDataURL}
+      sizes="100vw"
+    />
   );
 }
 
