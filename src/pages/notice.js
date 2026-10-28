@@ -17,7 +17,7 @@ export default function Notice({ data }) {
 export async function getStaticProps() {
   const query = `*[_type == 'homepage'][0]{
       noticeTitle,
-      "notices":*[_type == 'noticepage']{
+      "notices":*[_type == 'noticepage'] | order(date desc){
         title,
         date,
         "pdfFileURL": pdfFile.asset->url
